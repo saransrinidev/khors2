@@ -50,7 +50,7 @@ export default function Hero() {
       />
 
       {/* White wash so the copy stays legible over the photo */}
-      <div className="absolute inset-0 -z-10 bg-white/45 md:hidden" />
+      <div className="absolute inset-0 -z-10 bg-white/60 backdrop-blur-[3px] md:hidden" />
       <div className="absolute inset-0 -z-10 hidden bg-[linear-gradient(to_right,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.66)_24%,rgba(255,255,255,0.18)_50%,rgba(255,255,255,0)_66%)] md:block" />
 
       <div className="relative flex w-full max-w-[1440px] flex-1 flex-col justify-between px-5 pb-6 pt-6 sm:px-8 sm:pt-8 lg:px-[100px] lg:pb-[22px] lg:pt-[32px]">
