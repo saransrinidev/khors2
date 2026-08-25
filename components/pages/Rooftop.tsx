@@ -85,7 +85,7 @@ export default function Rooftop() {
           {/* Left content */}
           <div className="flex flex-1 flex-col justify-center px-5 py-8 sm:px-8 lg:max-w-[50%] lg:px-[100px] lg:py-[40px]">
             <div className="max-w-[480px]">
-              <h2 className="font-display text-[36px] font-bold leading-[1.1] text-navy sm:text-[44px] lg:text-[52px]">
+              <h2 className="font-display text-[30px] font-bold leading-[1.1] text-navy sm:text-[44px] lg:text-[52px]">
                 Rooftop Solar
                 <br />
                 <span className="text-brand">Solutions</span>
@@ -94,15 +94,15 @@ export default function Rooftop() {
               {/* Divider */}
               <div className="mt-[14px] h-[3px] w-[40px] rounded-full bg-navy lg:mt-[18px] lg:h-[4px] lg:w-[50px]" />
 
-              <p className="mt-[16px] text-[15px] leading-[1.5] text-navy/80 lg:mt-[20px] lg:text-[17px]">
+              <p className="mt-[16px] text-[14px] leading-[1.5] text-navy/80 sm:text-[15px] lg:mt-[20px] lg:text-[17px]">
                 Smart, Sustainable, Savings for a lifetime.
-                <br />
-                Power your home or business with clean solar energy.
+                <br className="hidden sm:block" /> Power your home or business
+                with clean solar energy.
               </p>
 
               <Link
                 href="#contact"
-                className="mt-[22px] inline-flex h-[50px] items-center gap-[11px] rounded-[10px] bg-brand-btn px-[20px] text-[16px] font-medium text-white shadow-[0_8px_20px_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn lg:mt-[28px] lg:h-[56px] lg:gap-[13px] lg:px-[24px] lg:text-[18px]"
+                className="mt-[22px] inline-flex h-[50px] w-full items-center justify-center gap-[11px] rounded-[10px] bg-brand-btn px-[20px] text-[15px] font-medium text-white shadow-[0_8px_20px_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:w-auto sm:justify-start sm:text-[16px] lg:mt-[28px] lg:h-[56px] lg:gap-[13px] lg:px-[24px] lg:text-[18px]"
               >
                 <CalendarCheck className="h-[19px] w-[19px] lg:h-[22px] lg:w-[22px]" />
                 Schedule a free consultation
@@ -119,8 +119,8 @@ export default function Rooftop() {
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-center"
             />
-            {/* Fade edges */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,transparent_20%)]" />
+            {/* Fade edges — the horizontal fade only makes sense side-by-side */}
+            <div className="absolute inset-0 hidden bg-[linear-gradient(to_right,white_0%,transparent_20%)] lg:block" />
             <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,transparent_15%)]" />
             <div className="absolute inset-0 bg-[linear-gradient(to_top,white_0%,transparent_15%)]" />
           </div>
@@ -137,19 +137,19 @@ export default function Rooftop() {
             Complete solutions tailored to your energy needs.
           </p>
 
-          <div className="mt-[20px] grid grid-cols-1 gap-[16px] sm:grid-cols-2 lg:mt-[28px] lg:grid-cols-3 xl:grid-cols-6 xl:gap-[10px]">
+          <div className="mt-[20px] grid grid-cols-2 gap-x-[14px] gap-y-[22px] sm:gap-[16px] lg:mt-[28px] lg:grid-cols-3 xl:grid-cols-6 xl:gap-[10px]">
             {steps.map(({ Icon, number, title, desc }) => (
               <div
                 key={title}
                 className="flex flex-col items-center text-center"
               >
-                <span className="flex h-[56px] w-[56px] items-center justify-center rounded-[12px] border-2 border-navy/20 text-navy lg:h-[64px] lg:w-[64px]">
-                  <Icon className="h-[28px] w-[28px] lg:h-[32px] lg:w-[32px]" />
+                <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[12px] border-2 border-navy/20 text-navy sm:h-[56px] sm:w-[56px] lg:h-[64px] lg:w-[64px]">
+                  <Icon className="h-[24px] w-[24px] sm:h-[28px] sm:w-[28px] lg:h-[32px] lg:w-[32px]" />
                 </span>
-                <h4 className="mt-[12px] text-[14px] font-bold leading-[1.3] text-navy lg:mt-[16px] lg:text-[15px]">
+                <h4 className="mt-[10px] text-[13px] font-bold leading-[1.3] text-navy sm:mt-[12px] sm:text-[14px] lg:mt-[16px] lg:text-[15px]">
                   {number}. {title}
                 </h4>
-                <p className="mt-[6px] text-[12px] leading-[1.4] text-navy/70 lg:text-[13px]">
+                <p className="mt-[6px] text-[11.5px] leading-[1.4] text-navy/70 sm:text-[12px] lg:text-[13px]">
                   {desc}
                 </p>
               </div>
@@ -160,14 +160,14 @@ export default function Rooftop() {
 
       {/* ---------- Benefits bar ---------- */}
       <div className="w-full bg-white shadow-[0_4px_24px_rgba(15,26,51,0.1)]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 divide-y divide-navy/10 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0">
           {benefits.map(({ Icon, title, sub }) => (
             <div
               key={title}
-              className="relative flex items-center gap-[14px] px-[20px] py-[20px] lg:gap-[18px] lg:px-[28px] lg:py-[26px] lg:before:absolute lg:before:inset-y-[16px] lg:before:left-0 lg:before:w-px lg:before:bg-navy/10 lg:first:before:hidden"
+              className="relative flex items-center gap-[14px] px-[20px] py-[15px] sm:py-[20px] lg:gap-[18px] lg:px-[28px] lg:py-[26px] lg:before:absolute lg:before:inset-y-[16px] lg:before:left-0 lg:before:w-px lg:before:bg-navy/10 lg:first:before:hidden"
             >
-              <Icon className="h-[36px] w-[36px] shrink-0 text-brand lg:h-[42px] lg:w-[42px]" />
-              <span className="block">
+              <Icon className="h-[30px] w-[30px] shrink-0 text-brand sm:h-[36px] sm:w-[36px] lg:h-[42px] lg:w-[42px]" />
+              <span className="block min-w-0">
                 <span className="block text-[14px] font-semibold leading-[1.3] text-navy lg:text-[16px]">
                   {title}
                 </span>

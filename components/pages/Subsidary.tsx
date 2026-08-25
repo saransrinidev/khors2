@@ -82,15 +82,15 @@ export default function Subsidary() {
         priority
       />
 
-      {/* Mobile blur overlay */}
-      <div className="absolute inset-0 -z-10 bg-white/70 backdrop-blur-[3px] md:hidden" />
+      {/* Wash for readability on phones and tablets */}
+      <div className="absolute inset-0 -z-10 bg-white/70 backdrop-blur-[3px] lg:hidden" />
       {/* Desktop gradient overlay — left side readable */}
-      <div className="absolute inset-0 -z-10 hidden bg-[linear-gradient(to_right,rgba(255,255,255,0.93)_0%,rgba(255,255,255,0.78)_28%,rgba(255,255,255,0.25)_52%,rgba(255,255,255,0)_65%)] md:block" />
+      <div className="absolute inset-0 -z-10 hidden bg-[linear-gradient(to_right,rgba(255,255,255,0.93)_0%,rgba(255,255,255,0.78)_28%,rgba(255,255,255,0.25)_52%,rgba(255,255,255,0)_65%)] lg:block" />
 
       {/* Main content */}
-      <div className="relative flex flex-1 w-full px-5 py-[28px] sm:px-8 lg:px-[80px] lg:py-[40px]">
+      <div className="relative flex flex-1 w-full flex-col px-5 py-[28px] sm:px-8 md:flex-row md:items-center md:gap-[30px] lg:gap-[50px] lg:px-[80px] lg:py-[40px]">
         {/* Left column */}
-        <div className="flex flex-col justify-center max-w-[400px] lg:max-w-[440px]">
+        <div className="flex w-full flex-col justify-center md:max-w-[400px] md:shrink-0 lg:max-w-[440px]">
           <h2 className="font-display text-[34px] font-bold leading-[1.08] text-navy sm:text-[42px] lg:text-[52px]">
             Government
             <br />
@@ -122,11 +122,11 @@ export default function Subsidary() {
                 <span className="flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-full bg-navy text-[11px] font-bold text-white lg:h-[34px] lg:w-[34px] lg:text-[13px]">
                   {number}
                 </span>
-                <div className="flex items-start gap-[8px]">
+                <div className="flex min-w-0 items-start gap-[8px]">
                   <span className="mt-[2px] flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-[6px] bg-brand/10 lg:h-[30px] lg:w-[30px]">
                     <Icon className="h-[14px] w-[14px] text-brand lg:h-[16px] lg:w-[16px]" />
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-[13px] font-bold text-navy lg:text-[15px]">{title}</h4>
                     <p className="text-[11px] font-bold leading-[1.4] text-navy/70 lg:text-[13px]">{desc}</p>
                   </div>
@@ -137,8 +137,8 @@ export default function Subsidary() {
         </div>
 
         {/* Right column — subsidy table card */}
-        <div className="hidden flex-1 items-end justify-center pb-[20px] md:flex lg:pb-[30px]">
-          <div className="w-full max-w-[380px] rounded-[16px] bg-white/95 px-[22px] py-[22px] shadow-[0_8px_30px_rgba(15,26,51,0.14)] backdrop-blur-sm lg:max-w-[420px] lg:px-[28px] lg:py-[28px]">
+        <div className="mt-[24px] flex w-full min-w-0 flex-1 items-end justify-center md:mt-0 md:justify-center md:pb-[6px] lg:pb-[10px]">
+          <div className="w-full max-w-[400px] rounded-[12px] bg-white/95 px-[16px] py-[16px] shadow-[0_8px_30px_rgba(15,26,51,0.14)] backdrop-blur-sm md:max-w-[300px] lg:max-w-[330px] lg:px-[20px] lg:py-[20px]">
             <div className="flex items-center gap-[8px]">
               <Home className="h-[18px] w-[18px] text-navy lg:h-[20px] lg:w-[20px]" />
               <h3 className="text-[14px] font-bold uppercase tracking-[0.04em] text-navy lg:text-[16px]">
@@ -148,17 +148,17 @@ export default function Subsidary() {
 
             {/* Table */}
             <div className="mt-[14px] overflow-hidden rounded-[10px] border border-navy/10">
-              <div className="grid grid-cols-2 bg-navy/5 px-[14px] py-[10px]">
+              <div className="grid grid-cols-2 gap-[8px] bg-navy/5 px-[14px] py-[10px]">
                 <span className="text-[12px] font-semibold text-navy lg:text-[13px]">System Size</span>
                 <span className="text-[12px] font-semibold text-navy lg:text-[13px]">Subsidy Available</span>
               </div>
               {subsidyTable.map(({ size, amount }) => (
-                <div key={size} className="grid grid-cols-2 border-t border-navy/10 px-[14px] py-[12px] lg:py-[14px]">
-                  <div className="flex items-center gap-[6px]">
-                    <Home className="h-[16px] w-[16px] text-brand lg:h-[18px] lg:w-[18px]" />
-                    <span className="text-[13px] font-bold text-navy lg:text-[15px]">{size}</span>
+                <div key={size} className="grid grid-cols-2 items-center gap-[8px] border-t border-navy/10 px-[14px] py-[12px] lg:py-[14px]">
+                  <div className="flex min-w-0 items-center gap-[6px]">
+                    <Home className="h-[16px] w-[16px] shrink-0 text-brand lg:h-[18px] lg:w-[18px]" />
+                    <span className="truncate text-[13px] font-bold text-navy lg:text-[15px]">{size}</span>
                   </div>
-                  <div className="flex items-center gap-[4px]">
+                  <div className="flex min-w-0 flex-wrap items-baseline gap-x-[4px]">
                     <span className="text-[12px] font-bold text-navy/70 lg:text-[13px]">Up to</span>
                     <span className="text-[18px] font-bold text-navy lg:text-[22px]">{amount}</span>
                   </div>
@@ -170,13 +170,13 @@ export default function Subsidary() {
             <div className="mt-[14px] flex items-center gap-[6px]">
               <CheckCircle2 className="h-[14px] w-[14px] text-brand lg:h-[16px] lg:w-[16px]" />
               <p className="text-[12px] font-bold text-navy/80 lg:text-[13px]">
-                We make the subsidy process simple, fast & hassle-free.
+                We make the subsidy process simple, fast &amp; hassle-free.
               </p>
             </div>
 
             <Link
               href="#contact"
-              className="mt-[14px] inline-flex h-[44px] items-center gap-[9px] rounded-[8px] bg-brand-btn px-[16px] text-[14px] font-medium text-white shadow-[0_6px_16px_rgba(15,26,51,0.15)] transition-colors hover:bg-brand-btn-hover lg:mt-[16px] lg:h-[48px] lg:gap-[10px] lg:px-[20px] lg:text-[16px]"
+              className="mt-[14px] inline-flex h-[44px] w-full items-center justify-center gap-[9px] rounded-[8px] bg-brand-btn px-[16px] text-[14px] font-medium text-white shadow-[0_6px_16px_rgba(15,26,51,0.15)] transition-colors hover:bg-brand-btn-hover md:w-auto md:justify-start lg:mt-[16px] lg:h-[48px] lg:gap-[10px] lg:px-[20px] lg:text-[16px]"
             >
               <CalendarCheck className="h-[16px] w-[16px] lg:h-[18px] lg:w-[18px]" />
               Schedule a free consultation
