@@ -74,7 +74,7 @@ export default function Subsidary() {
     <section className="relative isolate w-full flex flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
       {/* Background image */}
       <Image
-        src="/subsidary7.png"
+        src="/subsidary/background.png"
         alt="Government subsidy benefits for solar installations"
         fill
         sizes="100vw"

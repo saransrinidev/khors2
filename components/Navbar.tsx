@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="relative flex h-[76px] items-center justify-between px-5 lg:h-[92px] lg:px-10">
         <Link href="/" aria-label="Khors Renewables home" className="shrink-0">
           <Image
-            src="/vertical-logo.png"
+            src="/navbar/logo.png"
             alt="Khors Renewables"
             width={300}
             height={300}

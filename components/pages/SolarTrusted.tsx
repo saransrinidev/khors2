@@ -33,17 +33,17 @@ const cards = [
 
 const products = [
   {
-    image: "/solar.png",
+    image: "/solar-trusted/solar-panels.png",
     title: "SOLAR PANELS",
     tags: ["High Efficiency", "Tier-1 Quality", "Long Lasting"],
   },
   {
-    image: "/center.png",
+    image: "/solar-trusted/inverters.png",
     title: "INVERTERS",
     tags: ["Reliable", "Efficient", "Smart"],
   },
   {
-    image: "/last.png",
+    image: "/solar-trusted/mounting-structures.png",
     title: "MOUNTING STRUCTURES",
     tags: ["Corrosion Resistant", "Durable", "Safe"],
   },
@@ -54,7 +54,7 @@ export default function SolarTrusted() {
     <section className="relative w-full h-screen max-h-[100svh] overflow-hidden">
       {/* Background image — cover full screen */}
       <Image
-        src="/solartrust2.png"
+        src="/solar-trusted/background.png"
         alt="Khors Renewables trusted solar solutions"
         fill
         sizes="100vw"
@@ -116,7 +116,7 @@ export default function SolarTrusted() {
           {/* Humans image — bottom right, behind button, overlapping cards */}
           <div className="pointer-events-none absolute bottom-0 right-[40px] hidden h-[420px] w-[480px] md:block lg:right-[60px] lg:h-[520px] lg:w-[580px]" style={{ zIndex: 1 }}>
             <Image
-              src="/humans2.png"
+              src="/solar-trusted/team.png"
               alt="Khors Renewables team members"
               fill
               sizes="580px"

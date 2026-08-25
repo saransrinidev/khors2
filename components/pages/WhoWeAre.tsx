@@ -1,10 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Users,
-  BadgeCheck,
-  Wrench,
-  Home,
   Zap,
   Leaf,
   ShieldCheck,
@@ -14,19 +10,19 @@ import {
 
 const points = [
   {
-    Icon: Users,
+    logo: "/who-we-are/logo1.png",
     text: "At Khors Renewables, we are committed to making solar energy simple, affordable, and accessible for homeowners and businesses across India.",
   },
   {
-    Icon: BadgeCheck,
+    logo: "/who-we-are/logo2.png",
     text: "Our mission is to help customers reduce their electricity costs, achieve energy independence, and contribute to a cleaner, greener future.",
   },
   {
-    Icon: Wrench,
+    logo: "/who-we-are/logo3.png",
     text: "With a team of qualified engineers, certified installation professionals, and customer support specialists, we provide end-to-end solar solutions\u2014from consultation and design to installation, commissioning, and after-sales support.",
   },
   {
-    Icon: Home,
+    logo: "/who-we-are/logo4.png",
     text: "Whether you are looking to power your home, commercial building, or industrial facility, we deliver reliable, high-performance solar systems designed for maximum savings and long-term value.",
   },
 ];
@@ -59,7 +55,7 @@ export default function WhoWeAre() {
     <section className="relative isolate flex min-h-[700px] w-full flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
       {/* Background photo */}
       <Image
-        src="/whowebackground.png"
+        src="/who-we-are/background2.png"
         alt="Khors Renewables team working on solar panel installation"
         fill
         sizes="100vw"
@@ -88,14 +84,21 @@ export default function WhoWeAre() {
 
           {/* Points */}
           <div className="mt-[18px] space-y-[0px] lg:mt-[22px] lg:space-y-[0px] [text-shadow:0_0_8px_rgba(255,255,255,0.9),0_0_16px_rgba(255,255,255,0.7)]">
-            {points.map(({ Icon, text }, i) => (
+            {points.map(({ logo, text }, i) => (
               <div key={text.slice(0, 30)}>
                 {i > 0 && (
                   <div className="ml-[68px] h-px bg-navy/15 lg:ml-[80px]" />
                 )}
                 <div className="flex items-start gap-[14px] py-[12px] lg:gap-[18px] lg:py-[14px]">
-                  <span className="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full bg-navy text-white lg:h-[62px] lg:w-[62px] [text-shadow:none]">
-                    <Icon className="h-[26px] w-[26px] lg:h-[30px] lg:w-[30px]" />
+                  <span className="relative flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full bg-navy overflow-hidden lg:h-[62px] lg:w-[62px] [text-shadow:none]">
+                    <Image
+                      src={logo}
+                      alt=""
+                      width={62}
+                      height={62}
+                      className="h-full w-full object-cover"
+                      unoptimized
+                    />
                   </span>
                   <p className="text-[14px] leading-[1.45] text-navy/90 lg:text-[15px]">
                     {text}

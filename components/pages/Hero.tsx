@@ -41,7 +41,7 @@ export default function Hero() {
     <section className="relative isolate flex min-h-[740px] w-full flex-col overflow-hidden sm:min-h-[820px] lg:min-h-[calc(100svh_-_92px)]">
       {/* Background photo */}
       <Image
-        src="/hero-background3.png"
+        src="/hero/background.png"
         alt="Solar technician standing above a city neighbourhood of rooftop solar homes"
         fill
         priority

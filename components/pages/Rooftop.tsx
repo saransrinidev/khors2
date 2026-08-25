@@ -113,7 +113,7 @@ export default function Rooftop() {
           {/* Right image */}
           <div className="relative min-h-[300px] w-full lg:min-h-[560px] lg:w-[50%]">
             <Image
-              src="/rooftop.png"
+              src="/rooftop/house.png"
               alt="House with rooftop solar panels"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
