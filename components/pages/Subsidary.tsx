@@ -74,7 +74,7 @@ export default function Subsidary() {
     <section className="relative isolate w-full flex flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
       {/* Background image */}
       <Image
-        src="/subsidary/background.png"
+        src="/subsidary/back2.png"
         alt="Government subsidy benefits for solar installations"
         fill
         sizes="100vw"
@@ -137,7 +137,7 @@ export default function Subsidary() {
         </div>
 
         {/* Right column — subsidy table card */}
-        <div className="hidden flex-1 items-center justify-center md:flex">
+        <div className="hidden flex-1 items-end justify-center pb-[20px] md:flex lg:pb-[30px]">
           <div className="w-full max-w-[380px] rounded-[16px] bg-white/95 px-[22px] py-[22px] shadow-[0_8px_30px_rgba(15,26,51,0.14)] backdrop-blur-sm lg:max-w-[420px] lg:px-[28px] lg:py-[28px]">
             <div className="flex items-center gap-[8px]">
               <Home className="h-[18px] w-[18px] text-navy lg:h-[20px] lg:w-[20px]" />

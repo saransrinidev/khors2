@@ -116,8 +116,8 @@ export default function SolarTrusted() {
             ))}
           </div>
 
-          {/* Humans image — right side, above cards, hidden on smaller screens where it overlaps content */}
-          <div className="pointer-events-none absolute bottom-[50px] right-[20px] hidden h-[360px] w-[400px] xl:block lg:bottom-[60px] lg:right-[40px] lg:h-[440px] lg:w-[500px]" style={{ zIndex: 5 }}>
+          {/* Humans image — right side, behind cards, visible above/below them */}
+          <div className="pointer-events-none absolute bottom-[50px] right-[20px] hidden h-[360px] w-[400px] xl:block lg:bottom-[60px] lg:right-[40px] lg:h-[440px] lg:w-[500px]" style={{ zIndex: 2 }}>
             <Image
               src="/solar-trusted/team.png"
               alt="Khors Renewables team members"

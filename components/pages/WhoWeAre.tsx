@@ -55,7 +55,7 @@ export default function WhoWeAre() {
     <section className="relative isolate flex min-h-[700px] w-full flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
       {/* Background photo */}
       <Image
-        src="/who-we-are/background3.png"
+        src="/who-we-are/final-Bg.png"
         alt="Khors Renewables team working on solar panel installation"
         fill
         sizes="100vw"
