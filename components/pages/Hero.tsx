@@ -57,7 +57,7 @@ export default function Hero() {
 
 
         {/* ---------- Left column ---------- */}
-        <div className="max-w-[700px] md:max-w-[780px] lg:max-w-[900px]">
+        <div className="max-w-[700px] md:max-w-[780px] lg:max-w-[900px] [text-shadow:0_0_10px_rgba(255,255,255,0.8),0_0_20px_rgba(255,255,255,0.6)]">
           <h1 className="font-display font-bold tracking-[-0.015em] text-navy">
             <span className="block whitespace-nowrap text-[38px] leading-[1.14] sm:text-[49px] lg:text-[61px]">
               Cut your electricity bills
@@ -106,7 +106,7 @@ export default function Hero() {
 
           <Link
             href="#contact"
-            className="mt-[16px] inline-flex h-[50px] items-center gap-[11px] rounded-[10px] bg-brand-btn px-[20px] text-[16px] font-medium text-white shadow-[0_8px_20px_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn lg:mt-[18px] lg:h-[59px] lg:gap-[13px] lg:px-[27px] lg:text-[20px]"
+            className="mt-[16px] inline-flex h-[50px] items-center gap-[11px] rounded-[10px] bg-brand-btn px-[20px] text-[16px] font-medium text-white shadow-[0_8px_20px_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn lg:mt-[18px] lg:h-[59px] lg:gap-[13px] lg:px-[27px] lg:text-[20px] [text-shadow:none]"
           >
             <CalendarCheck className="h-[19px] w-[19px] lg:h-[22px] lg:w-[22px]" />
             Schedule a free consultation

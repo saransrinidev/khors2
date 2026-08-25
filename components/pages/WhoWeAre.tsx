@@ -70,14 +70,14 @@ export default function WhoWeAre() {
       <div className="absolute inset-0 -z-10 bg-white/60 backdrop-blur-[3px] md:hidden" />
       <div className="absolute inset-0 -z-10 hidden bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.7)_28%,rgba(255,255,255,0.2)_52%,rgba(255,255,255,0)_66%)] md:block" />
 
-      <div className="relative flex w-full max-w-[1440px] flex-1 flex-col justify-between px-5 pb-6 pt-8 sm:px-8 sm:pt-10 lg:px-[100px] lg:pb-[22px] lg:pt-[40px]">
+      <div className="relative flex w-full flex-1 flex-col justify-between px-5 pb-6 pt-8 sm:px-8 sm:pt-10 lg:px-[100px] lg:pb-[22px] lg:pt-[40px]">
         {/* Left column content */}
         <div className="max-w-[520px] md:max-w-[460px] lg:max-w-[480px]">
           <h2 className="font-display text-[36px] font-bold leading-[1.1] text-navy sm:text-[44px] lg:text-[52px]">
             Who we are
           </h2>
 
-          <p className="mt-[10px] font-display text-[18px] font-bold leading-[1.3] text-navy sm:text-[20px] lg:mt-[14px] lg:text-[23px]">
+          <p className="mt-[10px] font-display text-[18px] font-bold leading-[1.3] text-brand sm:text-[20px] lg:mt-[14px] lg:text-[23px]">
             Powering Homes and Businesses
             <br />
             with Clean Energy
@@ -87,15 +87,15 @@ export default function WhoWeAre() {
           <div className="mt-[14px] h-[3px] w-[40px] rounded-full bg-navy lg:mt-[18px] lg:h-[4px] lg:w-[50px]" />
 
           {/* Points */}
-          <div className="mt-[18px] space-y-[0px] lg:mt-[22px] lg:space-y-[0px]">
+          <div className="mt-[18px] space-y-[0px] lg:mt-[22px] lg:space-y-[0px] [text-shadow:0_0_8px_rgba(255,255,255,0.9),0_0_16px_rgba(255,255,255,0.7)]">
             {points.map(({ Icon, text }, i) => (
               <div key={text.slice(0, 30)}>
                 {i > 0 && (
-                  <div className="ml-[58px] h-px bg-navy/15 lg:ml-[68px]" />
+                  <div className="ml-[68px] h-px bg-navy/15 lg:ml-[80px]" />
                 )}
                 <div className="flex items-start gap-[14px] py-[12px] lg:gap-[18px] lg:py-[14px]">
-                  <span className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-[10px] bg-navy text-white lg:h-[50px] lg:w-[50px]">
-                    <Icon className="h-[22px] w-[22px] lg:h-[26px] lg:w-[26px]" />
+                  <span className="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full bg-navy text-white lg:h-[62px] lg:w-[62px] [text-shadow:none]">
+                    <Icon className="h-[26px] w-[26px] lg:h-[30px] lg:w-[30px]" />
                   </span>
                   <p className="text-[14px] leading-[1.45] text-navy/90 lg:text-[15px]">
                     {text}
@@ -107,7 +107,7 @@ export default function WhoWeAre() {
         </div>
 
         {/* CTA button — bottom right */}
-        <div className="mt-[28px] flex justify-end lg:mt-auto">
+        <div className="mt-[28px] flex w-full justify-end lg:mt-auto">
           <Link
             href="#contact"
             className="inline-flex h-[50px] items-center gap-[11px] rounded-[10px] bg-brand-btn px-[20px] text-[16px] font-medium text-white shadow-[0_8px_20px_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn lg:h-[56px] lg:gap-[13px] lg:px-[24px] lg:text-[18px]"
@@ -119,7 +119,7 @@ export default function WhoWeAre() {
       </div>
 
       {/* ---------- Benefits bar — full width ---------- */}
-      <div className="relative z-10 mx-[10px] mb-[10px] rounded-[14px] bg-navy shadow-[0_-4px_34px_rgba(15,26,51,0.12)] sm:mx-8 lg:ml-[100px] lg:mr-[10px]">
+      <div className="relative z-10 w-full bg-navy">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map(({ Icon, title, sub }) => (
             <div

@@ -128,8 +128,8 @@ export default function Rooftop() {
       </div>
 
       {/* Services grid */}
-      <div className="w-full bg-white px-5 py-[40px] sm:px-8 lg:px-[100px] lg:py-[60px]">
-        <div className="mx-auto max-w-[1200px] text-center">
+      <div className="w-full bg-white px-5 py-[40px] sm:px-8 lg:px-[40px] lg:py-[60px]">
+        <div className="w-full text-center">
           <h3 className="font-display text-[26px] font-bold text-navy sm:text-[30px] lg:text-[36px]">
             Our Rooftop Solar Services
           </h3>
@@ -137,7 +137,7 @@ export default function Rooftop() {
             Complete solutions tailored to your energy needs.
           </p>
 
-          <div className="mt-[32px] grid grid-cols-1 gap-[24px] sm:grid-cols-2 lg:mt-[44px] lg:grid-cols-3 xl:grid-cols-6 xl:gap-[20px]">
+          <div className="mt-[32px] grid grid-cols-1 gap-[16px] sm:grid-cols-2 lg:mt-[44px] lg:grid-cols-3 xl:grid-cols-6 xl:gap-[10px]">
             {steps.map(({ Icon, number, title, desc }) => (
               <div
                 key={title}
@@ -159,12 +159,12 @@ export default function Rooftop() {
       </div>
 
       {/* ---------- Benefits bar ---------- */}
-      <div className="mx-[10px] mb-[10px] rounded-[14px] bg-white shadow-[0_4px_24px_rgba(15,26,51,0.1)] sm:mx-8 lg:mx-[100px]">
+      <div className="w-full bg-white shadow-[0_4px_24px_rgba(15,26,51,0.1)]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map(({ Icon, title, sub }) => (
             <div
               key={title}
-              className="relative flex items-center gap-[14px] px-[20px] py-[14px] lg:gap-[18px] lg:px-[22px] lg:py-[18px] lg:before:absolute lg:before:inset-y-[14px] lg:before:left-0 lg:before:w-px lg:before:bg-navy/10 lg:first:before:hidden"
+              className="relative flex items-center gap-[14px] px-[20px] py-[20px] lg:gap-[18px] lg:px-[28px] lg:py-[26px] lg:before:absolute lg:before:inset-y-[16px] lg:before:left-0 lg:before:w-px lg:before:bg-navy/10 lg:first:before:hidden"
             >
               <Icon className="h-[36px] w-[36px] shrink-0 text-brand lg:h-[42px] lg:w-[42px]" />
               <span className="block">

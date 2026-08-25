@@ -18,7 +18,7 @@ export default function Contact() {
         alt="Khors Renewables customer support representative"
         fill
         sizes="100vw"
-        className="-z-20 object-cover object-[center_20%]"
+        className="-z-20 object-cover object-[center_bottom]"
         priority
       />
 
@@ -29,6 +29,7 @@ export default function Contact() {
 
       {/* Main content */}
       <div className="relative flex flex-1 w-full px-5 py-[32px] sm:px-8 lg:px-[80px] lg:py-[48px]">
+        {/* Left column */}
         <div className="flex flex-col justify-center max-w-[460px] lg:max-w-[500px]">
           {/* Heading */}
           <h2 className="font-display text-[36px] font-bold leading-[1.08] text-navy sm:text-[44px] lg:text-[54px]">
@@ -86,6 +87,21 @@ export default function Contact() {
               <Calendar className="h-[16px] w-[16px] shrink-0 text-navy/60 lg:h-[18px] lg:w-[18px]" />
               <span className="text-[14px] font-semibold text-navy lg:text-[16px]">MON–SAT: 10:30 AM – 7:30 PM</span>
             </div>
+          </div>
+        </div>
+
+        {/* Right column — tagline positioned to the left of the person */}
+        <div className="hidden flex-1 md:flex items-start justify-center pt-[20px] lg:pt-[30px]">
+          <div className="text-left [text-shadow:0_0_12px_rgba(255,255,255,0.9),0_0_24px_rgba(255,255,255,0.7)]">
+            <p className="font-display text-[20px] font-bold uppercase leading-[1.3] text-navy lg:text-[26px]">
+              Clean Energy.
+            </p>
+            <p className="font-display text-[20px] font-bold uppercase leading-[1.3] text-navy lg:text-[26px]">
+              Lower Bills.
+            </p>
+            <p className="font-display text-[20px] font-bold uppercase leading-[1.3] text-brand lg:text-[26px]">
+              Better Tomorrow.
+            </p>
           </div>
         </div>
       </div>
