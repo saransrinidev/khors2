@@ -1,31 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Landmark,
-  IndianRupee,
-  Package,
-  UsersRound,
   CalendarCheck,
 } from "lucide-react";
 
 const cards = [
   {
-    Icon: Landmark,
+    logo: "/solar-trusted/logo1.png",
     title: "MNRE COMPLIANT INSTALLATIONS",
     desc: "All our installations are fully compliant with MNRE guidelines and industry standards.",
   },
   {
-    Icon: IndianRupee,
+    logo: "/solar-trusted/logo2.png",
     title: "GOVERNMENT SUBSIDY ASSISTANCE",
     desc: "End-to-end support for subsidy applications, documentation and claim processing.",
   },
   {
-    Icon: Package,
+    logo: "/solar-trusted/logo3.png",
     title: "PREMIUM QUALITY COMPONENTS",
     desc: "We use Tier-1 solar panels, reliable inverters and durable mounting structures for maximum performance.",
   },
   {
-    Icon: UsersRound,
+    logo: "/solar-trusted/logo4.png",
     title: "CERTIFIED INSTALLATION TEAM",
     desc: "Our trained and certified professionals ensure safe, efficient and high-quality installations.",
   },
@@ -83,21 +79,28 @@ export default function SolarTrusted() {
 
           {/* Cards — positioned in center area */}
           <div className="relative mx-auto mt-[20px] grid w-full max-w-[1000px] grid-cols-2 gap-[10px] sm:gap-[14px] lg:mt-[30px] lg:grid-cols-4 lg:gap-[18px]" style={{ zIndex: 3 }}>
-            {cards.map(({ Icon, title, desc }) => (
+            {cards.map(({ logo, title, desc }) => (
               <div
                 key={title}
                 className="relative overflow-hidden rounded-[14px] bg-white/95 shadow-[0_4px_16px_rgba(15,26,51,0.1)] backdrop-blur-sm lg:rounded-[16px]"
               >
                 {/* Green check badge — top left */}
-                <span className="absolute left-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-full bg-brand text-white sm:h-[26px] sm:w-[26px] lg:left-[14px] lg:top-[14px] lg:h-[28px] lg:w-[28px]">
+                <span className="absolute left-[10px] top-[10px] z-10 flex h-[24px] w-[24px] items-center justify-center rounded-full bg-brand text-white sm:h-[26px] sm:w-[26px] lg:left-[12px] lg:top-[12px] lg:h-[28px] lg:w-[28px]">
                   <svg viewBox="0 0 24 24" className="h-[14px] w-[14px] lg:h-[16px] lg:w-[16px]" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="m5 12 5 5L20 7" />
                   </svg>
                 </span>
 
-                {/* Icon area with light bg */}
-                <div className="flex items-center justify-center bg-navy/5 px-[16px] pt-[40px] pb-[20px] sm:pt-[44px] sm:pb-[22px] lg:pt-[48px] lg:pb-[24px]">
-                  <Icon className="h-[40px] w-[40px] text-navy sm:h-[48px] sm:w-[48px] lg:h-[56px] lg:w-[56px]" />
+                {/* Logo image area — big, fills space */}
+                <div className="relative h-[100px] w-full sm:h-[130px] lg:h-[160px]">
+                  <Image
+                    src={logo}
+                    alt={title}
+                    fill
+                    sizes="250px"
+                    className="object-contain object-center p-[6px] sm:p-[8px] lg:p-[10px]"
+                    unoptimized
+                  />
                 </div>
 
                 {/* Text content */}
@@ -113,20 +116,20 @@ export default function SolarTrusted() {
             ))}
           </div>
 
-          {/* Humans image — bottom right, behind button, overlapping cards */}
-          <div className="pointer-events-none absolute bottom-0 right-[40px] hidden h-[420px] w-[480px] md:block lg:right-[60px] lg:h-[520px] lg:w-[580px]" style={{ zIndex: 1 }}>
+          {/* Humans image — right side, above cards, hidden on smaller screens where it overlaps content */}
+          <div className="pointer-events-none absolute bottom-[50px] right-[20px] hidden h-[360px] w-[400px] xl:block lg:bottom-[60px] lg:right-[40px] lg:h-[440px] lg:w-[500px]" style={{ zIndex: 5 }}>
             <Image
               src="/solar-trusted/team.png"
               alt="Khors Renewables team members"
               fill
-              sizes="580px"
+              sizes="440px"
               className="object-contain object-bottom"
               unoptimized
             />
           </div>
 
           {/* Spacer so the bottom band never overlaps the cards */}
-          <div className="mt-auto h-[150px] lg:h-[210px]" />
+          <div className="mt-auto h-[150px] lg:h-[190px]" />
         </div>
 
         {/* ---------- Bottom band: products + CTA connected ---------- */}
@@ -134,11 +137,11 @@ export default function SolarTrusted() {
           {/* Light strip — holds the labels; visuals rise above it */}
           <div className="relative flex-1 rounded-tr-[70px] bg-white/85 backdrop-blur-[2px] lg:rounded-tr-[90px]">
             {/* Product visuals, sitting on top of the strip */}
-            <div className="pointer-events-none absolute bottom-full left-0 right-0 flex items-end gap-[8px] px-[10px] sm:gap-[16px] sm:px-[20px] lg:gap-[24px] lg:px-[30px]">
+            <div className="pointer-events-none absolute bottom-full left-0 right-0 flex items-end gap-[8px] px-[10px] pb-[4px] sm:gap-[16px] sm:px-[20px] lg:gap-[24px] lg:px-[30px]">
               {products.map(({ image, title }) => (
                 <div
                   key={title}
-                  className="relative h-[76px] flex-1 sm:h-[100px] lg:h-[130px]"
+                  className="relative h-[60px] flex-1 sm:h-[80px] lg:h-[100px]"
                 >
                   <Image
                     src={image}
@@ -153,13 +156,13 @@ export default function SolarTrusted() {
             </div>
 
             {/* Labels — each column lines up with its visual above */}
-            <div className="flex items-start gap-[8px] px-[10px] pb-[10px] pt-[8px] sm:gap-[16px] sm:px-[20px] lg:gap-[24px] lg:px-[30px] lg:pb-[14px] lg:pt-[10px]">
+            <div className="flex items-start gap-[8px] px-[10px] pb-[12px] pt-[10px] sm:gap-[16px] sm:px-[20px] lg:gap-[24px] lg:px-[30px] lg:pb-[16px] lg:pt-[12px]">
               {products.map(({ title, tags }) => (
                 <div key={title} className="flex-1 text-center">
                   <h5 className="text-[11px] font-bold uppercase tracking-[0.04em] text-navy sm:text-[13px] lg:text-[15px]">
                     {title}
                   </h5>
-                  <p className="mt-[2px] text-[9px] text-navy/60 sm:text-[11px] lg:text-[12px]">
+                  <p className="mt-[3px] text-[9px] text-navy/60 sm:text-[11px] lg:text-[12px]">
                     {tags.join("  |  ")}
                   </p>
                 </div>

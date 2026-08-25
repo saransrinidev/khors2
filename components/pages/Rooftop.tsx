@@ -80,10 +80,10 @@ export default function Rooftop() {
   return (
     <section className="w-full">
       {/* Hero area — content left, image right */}
-      <div className="relative w-full overflow-hidden bg-white lg:min-h-[560px]">
+      <div className="relative w-full overflow-hidden bg-white lg:min-h-[440px]">
         <div className="flex w-full flex-col lg:flex-row">
           {/* Left content */}
-          <div className="flex flex-1 flex-col justify-center px-5 py-10 sm:px-8 lg:max-w-[50%] lg:px-[100px] lg:py-[60px]">
+          <div className="flex flex-1 flex-col justify-center px-5 py-8 sm:px-8 lg:max-w-[50%] lg:px-[100px] lg:py-[40px]">
             <div className="max-w-[480px]">
               <h2 className="font-display text-[36px] font-bold leading-[1.1] text-navy sm:text-[44px] lg:text-[52px]">
                 Rooftop Solar
@@ -111,7 +111,7 @@ export default function Rooftop() {
           </div>
 
           {/* Right image */}
-          <div className="relative min-h-[300px] w-full lg:min-h-[560px] lg:w-[50%]">
+          <div className="relative min-h-[260px] w-full lg:min-h-[440px] lg:w-[50%]">
             <Image
               src="/rooftop/house.png"
               alt="House with rooftop solar panels"
@@ -128,16 +128,16 @@ export default function Rooftop() {
       </div>
 
       {/* Services grid */}
-      <div className="w-full bg-white px-5 py-[40px] sm:px-8 lg:px-[40px] lg:py-[60px]">
+      <div className="w-full bg-white px-5 py-[24px] sm:px-8 lg:px-[40px] lg:py-[36px]">
         <div className="w-full text-center">
           <h3 className="font-display text-[26px] font-bold text-navy sm:text-[30px] lg:text-[36px]">
             Our Rooftop Solar Services
           </h3>
-          <p className="mt-[8px] text-[14px] text-navy/70 lg:text-[16px]">
+          <p className="mt-[6px] text-[14px] text-navy/70 lg:text-[16px]">
             Complete solutions tailored to your energy needs.
           </p>
 
-          <div className="mt-[32px] grid grid-cols-1 gap-[16px] sm:grid-cols-2 lg:mt-[44px] lg:grid-cols-3 xl:grid-cols-6 xl:gap-[10px]">
+          <div className="mt-[20px] grid grid-cols-1 gap-[16px] sm:grid-cols-2 lg:mt-[28px] lg:grid-cols-3 xl:grid-cols-6 xl:gap-[10px]">
             {steps.map(({ Icon, number, title, desc }) => (
               <div
                 key={title}
