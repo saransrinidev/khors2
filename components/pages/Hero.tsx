@@ -41,12 +41,12 @@ export default function Hero() {
     <section className="relative isolate flex min-h-[620px] w-full flex-col overflow-hidden sm:min-h-[760px] lg:min-h-[calc(100svh_-_92px)]">
       {/* Background photo */}
       <Image
-        src="/hero/background2.png"
+        src="/hero/bg3.png"
         alt="Solar technician standing above a city neighbourhood of rooftop solar homes"
         fill
         priority
         sizes="100vw"
-        className="-z-20 object-cover object-[68%_70%] lg:object-[center_70%]"
+        className="-z-20 object-cover object-[68%_60%] lg:object-[center_60%]"
       />
 
       {/* White wash so the copy stays legible over the photo */}

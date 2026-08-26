@@ -50,7 +50,7 @@ export default function SolarTrusted() {
     <section id="solar-trusted" className="relative w-full overflow-hidden">
       {/* Background image — cover full screen */}
       <Image
-        src="/solar-trusted/background.png"
+        src="/solar-trusted/background2.png"
         alt="Khors Renewables trusted solar solutions"
         fill
         sizes="100vw"
