@@ -15,7 +15,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-[0_1px_0_rgba(15,26,51,0.08)]">
+    <header className="relative z-50 bg-white shadow-[0_1px_0_rgba(15,26,51,0.08)]">
       <div className="relative flex h-[76px] items-center justify-between px-5 lg:h-[92px] lg:px-10">
         <Link href="/" aria-label="Khors Renewables home" className="shrink-0">
           <Image
