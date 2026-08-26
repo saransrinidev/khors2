@@ -71,7 +71,7 @@ const benefits = [
 
 export default function Subsidary() {
   return (
-    <section className="relative isolate w-full flex flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
+    <section id="subsidary" className="relative isolate w-full flex flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
       {/* Background image */}
       <Image
         src="/subsidary/back2.png"
@@ -137,7 +137,7 @@ export default function Subsidary() {
         </div>
 
         {/* Right column — subsidy table card */}
-        <div className="mt-[24px] flex w-full min-w-0 flex-1 items-end justify-center md:mt-0 md:justify-center md:pb-[6px] lg:pb-[10px]">
+        <div className="mt-[24px] flex w-full min-w-0 flex-1 items-end justify-center md:mt-0 md:justify-start md:pb-[6px] lg:pb-[10px]">
           <div className="w-full max-w-[400px] rounded-[12px] bg-white/95 px-[16px] py-[16px] shadow-[0_8px_30px_rgba(15,26,51,0.14)] backdrop-blur-sm md:max-w-[300px] lg:max-w-[330px] lg:px-[20px] lg:py-[20px]">
             <div className="flex items-center gap-[8px]">
               <Home className="h-[18px] w-[18px] text-navy lg:h-[20px] lg:w-[20px]" />

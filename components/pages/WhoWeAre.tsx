@@ -52,7 +52,7 @@ const benefits = [
 
 export default function WhoWeAre() {
   return (
-    <section className="relative isolate flex min-h-[560px] w-full flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
+    <section id="who-we-are" className="relative isolate flex min-h-[560px] w-full flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
       {/* Background photo */}
       <Image
         src="/who-we-are/final-Bg.png"
@@ -82,7 +82,7 @@ export default function WhoWeAre() {
           <div className="mt-[14px] h-[3px] w-[40px] rounded-full bg-navy lg:mt-[18px] lg:h-[4px] lg:w-[50px]" />
 
           {/* Points */}
-          <div className="mt-[18px] space-y-[0px] lg:mt-[22px] lg:space-y-[0px] [text-shadow:0_0_8px_rgba(255,255,255,0.9),0_0_16px_rgba(255,255,255,0.7)]">
+          <div className="mt-[18px] -ml-[10px] space-y-[0px] lg:mt-[22px] lg:-ml-[86px] lg:space-y-[0px] [text-shadow:0_0_8px_rgba(255,255,255,0.9),0_0_16px_rgba(255,255,255,0.7)]">
             {points.map(({ logo, text }, i) => (
               <div key={text.slice(0, 30)}>
                 {i > 0 && (

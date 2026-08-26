@@ -78,7 +78,7 @@ const benefits = [
 
 export default function Rooftop() {
   return (
-    <section className="w-full">
+    <section id="rooftop" className="w-full">
       {/* Hero area — content left, image right */}
       <div className="relative w-full overflow-hidden bg-white lg:min-h-[440px]">
         <div className="flex w-full flex-col lg:flex-row">

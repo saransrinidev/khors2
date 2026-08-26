@@ -47,7 +47,7 @@ const products = [
 
 export default function SolarTrusted() {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section id="solar-trusted" className="relative w-full overflow-hidden">
       {/* Background image — cover full screen */}
       <Image
         src="/solar-trusted/background.png"
