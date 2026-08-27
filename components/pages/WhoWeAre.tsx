@@ -52,7 +52,7 @@ const benefits = [
 
 export default function WhoWeAre() {
   return (
-    <section id="who-we-are" className="relative isolate flex min-h-[560px] w-full flex-col overflow-hidden lg:min-h-[calc(100svh_-_92px)]">
+    <section id="who-we-are" className="relative isolate flex min-h-[35rem] w-full flex-col overflow-hidden lg:min-h-[calc(100svh_-_5.75rem)]">
       {/* Background photo */}
       <Image
         src="/who-we-are/final-Bg.png"
@@ -63,33 +63,33 @@ export default function WhoWeAre() {
       />
 
       {/* White wash for text legibility */}
-      <div className="absolute inset-0 -z-10 bg-white/65 backdrop-blur-[3px] lg:hidden" />
+      <div className="absolute inset-0 -z-10 bg-white/65 backdrop-blur-[0.1875rem] lg:hidden" />
       <div className="absolute inset-0 -z-10 hidden bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.7)_28%,rgba(255,255,255,0.2)_52%,rgba(255,255,255,0)_66%)] lg:block" />
 
-      <div className="relative flex w-full flex-1 flex-col justify-between px-5 pb-6 pt-8 sm:px-8 sm:pt-10 lg:px-[100px] lg:pb-[22px] lg:pt-[40px]">
+      <div className="relative flex w-full flex-1 flex-col justify-between px-5 pb-6 pt-8 sm:px-8 sm:pt-10 lg:px-[6.25rem] lg:pb-[1.375rem] lg:pt-[2.5rem]">
         {/* Left column content */}
-        <div className="w-full max-w-[520px] md:max-w-[460px] lg:max-w-[480px]">
-          <h2 className="font-display text-[30px] font-bold leading-[1.1] text-navy sm:text-[44px] lg:text-[52px]">
+        <div className="w-full max-w-[32.5rem] md:max-w-[28.75rem] lg:max-w-[30rem]">
+          <h2 className="font-display text-[1.875rem] font-bold leading-[1.1] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
             Who we are
           </h2>
 
-          <p className="mt-[10px] font-display text-[16px] font-bold leading-[1.3] text-brand sm:text-[20px] lg:mt-[14px] lg:text-[23px]">
+          <p className="mt-[0.625rem] font-display text-[1rem] font-bold leading-[1.3] text-brand sm:text-[1.25rem] lg:mt-[0.875rem] lg:text-[1.4375rem]">
             Powering Homes and Businesses
             <br className="hidden sm:block" /> with Clean Energy
           </p>
 
           {/* Divider */}
-          <div className="mt-[14px] h-[3px] w-[40px] rounded-full bg-navy lg:mt-[18px] lg:h-[4px] lg:w-[50px]" />
+          <div className="mt-[0.875rem] h-[0.1875rem] w-[2.5rem] rounded-full bg-navy lg:mt-[1.125rem] lg:h-[0.25rem] lg:w-[3.125rem]" />
 
           {/* Points */}
-          <div className="mt-[18px] -ml-[10px] space-y-[0px] lg:mt-[22px] lg:-ml-[86px] lg:space-y-[0px] [text-shadow:0_0_8px_rgba(255,255,255,0.9),0_0_16px_rgba(255,255,255,0.7)]">
+          <div className="mt-[1.125rem] -ml-[0.625rem] space-y-[0rem] lg:mt-[1.375rem] lg:-ml-[5.375rem] lg:space-y-[0rem] [text-shadow:0_0_0.5rem_rgba(255,255,255,0.9),0_0_1rem_rgba(255,255,255,0.7)]">
             {points.map(({ logo, text }, i) => (
               <div key={text.slice(0, 30)}>
                 {i > 0 && (
-                  <div className="ml-[58px] h-px bg-navy/15 sm:ml-[68px] lg:ml-[80px]" />
+                  <div className="ml-[3.625rem] h-px bg-navy/15 sm:ml-[4.25rem] lg:ml-[5rem]" />
                 )}
-                <div className="flex items-start gap-[14px] py-[10px] lg:gap-[18px] lg:py-[14px]">
-                  <span className="relative flex h-[44px] w-[44px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy sm:h-[54px] sm:w-[54px] lg:h-[62px] lg:w-[62px] [text-shadow:none]">
+                <div className="flex items-start gap-[0.875rem] py-[0.625rem] lg:gap-[1.125rem] lg:py-[0.875rem]">
+                  <span className="relative flex h-[2.75rem] w-[2.75rem] shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy sm:h-[3.375rem] sm:w-[3.375rem] lg:h-[3.875rem] lg:w-[3.875rem] [text-shadow:none]">
                     <Image
                       src={logo}
                       alt=""
@@ -99,7 +99,7 @@ export default function WhoWeAre() {
                       unoptimized
                     />
                   </span>
-                  <p className="min-w-0 text-[13px] leading-[1.45] text-navy/90 sm:text-[14px] lg:text-[15px]">
+                  <p className="min-w-0 text-[0.8125rem] leading-[1.45] text-navy/90 sm:text-[0.875rem] lg:text-[0.9375rem]">
                     {text}
                   </p>
                 </div>
@@ -109,12 +109,12 @@ export default function WhoWeAre() {
         </div>
 
         {/* CTA button — full width on phones, bottom right on desktop */}
-        <div className="mt-[24px] flex w-full justify-start sm:justify-end lg:mt-auto">
+        <div className="mt-[1.5rem] flex w-full justify-start sm:justify-end lg:mt-auto">
           <Link
             href="#contact"
-            className="inline-flex h-[50px] w-full items-center justify-center gap-[11px] rounded-[10px] bg-brand-btn px-[20px] text-[15px] font-medium text-white shadow-[0_8px_20px_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:w-auto sm:text-[16px] lg:h-[56px] lg:gap-[13px] lg:px-[24px] lg:text-[18px]"
+            className="inline-flex h-[3.125rem] w-full items-center justify-center gap-[0.6875rem] rounded-[0.625rem] bg-brand-btn px-[1.25rem] text-[0.9375rem] font-medium text-white shadow-[0_0.5rem_1.25rem_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:w-auto sm:text-[1rem] lg:h-[3.5rem] lg:gap-[0.8125rem] lg:px-[1.5rem] lg:text-[1.125rem]"
           >
-            <CalendarCheck className="h-[19px] w-[19px] lg:h-[22px] lg:w-[22px]" />
+            <CalendarCheck className="h-[1.1875rem] w-[1.1875rem] lg:h-[1.375rem] lg:w-[1.375rem]" />
             Schedule a free consultation
           </Link>
         </div>
@@ -126,14 +126,14 @@ export default function WhoWeAre() {
           {benefits.map(({ Icon, title, sub }) => (
             <div
               key={title}
-              className="relative flex items-center gap-[14px] px-[20px] py-[13px] lg:gap-[18px] lg:px-[22px] lg:py-[18px] lg:before:absolute lg:before:inset-y-[14px] lg:before:left-0 lg:before:w-px lg:before:bg-white/20 lg:first:before:hidden"
+              className="relative flex items-center gap-[0.875rem] px-[1.25rem] py-[0.8125rem] lg:gap-[1.125rem] lg:px-[1.375rem] lg:py-[1.125rem] lg:before:absolute lg:before:inset-y-[0.875rem] lg:before:left-0 lg:before:w-px lg:before:bg-white/20 lg:first:before:hidden"
             >
-              <Icon className="h-[30px] w-[30px] shrink-0 text-brand-leaf sm:h-[36px] sm:w-[36px] lg:h-[42px] lg:w-[42px]" />
+              <Icon className="h-[1.875rem] w-[1.875rem] shrink-0 text-brand-leaf sm:h-[2.25rem] sm:w-[2.25rem] lg:h-[2.625rem] lg:w-[2.625rem]" />
               <span className="block min-w-0">
-                <span className="block text-[14px] font-semibold leading-[1.3] text-white lg:text-[16px]">
+                <span className="block text-[0.875rem] font-semibold leading-[1.3] text-white lg:text-[1rem]">
                   {title}
                 </span>
-                <span className="block text-[12px] leading-[1.3] text-white/70 lg:text-[13px]">
+                <span className="block text-[0.75rem] leading-[1.3] text-white/70 lg:text-[0.8125rem]">
                   {sub}
                 </span>
               </span>

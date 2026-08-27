@@ -80,21 +80,21 @@ export default function Rooftop() {
   return (
     <section id="rooftop" className="w-full">
       {/* Hero area — content left, image right */}
-      <div className="relative w-full overflow-hidden bg-white lg:min-h-[440px]">
+      <div className="relative w-full overflow-hidden bg-white lg:min-h-[27.5rem]">
         <div className="flex w-full flex-col lg:flex-row">
           {/* Left content */}
-          <div className="flex flex-1 flex-col justify-center px-5 py-8 sm:px-8 lg:max-w-[50%] lg:px-[100px] lg:py-[40px]">
-            <div className="max-w-[480px]">
-              <h2 className="font-display text-[30px] font-bold leading-[1.1] text-navy sm:text-[44px] lg:text-[52px]">
+          <div className="flex flex-1 flex-col justify-center px-5 py-8 sm:px-8 lg:max-w-[50%] lg:px-[6.25rem] lg:py-[2.5rem]">
+            <div className="max-w-[30rem]">
+              <h2 className="font-display text-[1.875rem] font-bold leading-[1.1] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
                 Rooftop Solar
                 <br />
                 <span className="text-brand">Solutions</span>
               </h2>
 
               {/* Divider */}
-              <div className="mt-[14px] h-[3px] w-[40px] rounded-full bg-navy lg:mt-[18px] lg:h-[4px] lg:w-[50px]" />
+              <div className="mt-[0.875rem] h-[0.1875rem] w-[2.5rem] rounded-full bg-navy lg:mt-[1.125rem] lg:h-[0.25rem] lg:w-[3.125rem]" />
 
-              <p className="mt-[16px] text-[14px] leading-[1.5] text-navy/80 sm:text-[15px] lg:mt-[20px] lg:text-[17px]">
+              <p className="mt-[1rem] text-[0.875rem] leading-[1.5] text-navy/80 sm:text-[0.9375rem] lg:mt-[1.25rem] lg:text-[1.0625rem]">
                 Smart, Sustainable, Savings for a lifetime.
                 <br className="hidden sm:block" /> Power your home or business
                 with clean solar energy.
@@ -102,16 +102,16 @@ export default function Rooftop() {
 
               <Link
                 href="#contact"
-                className="mt-[22px] inline-flex h-[50px] w-full items-center justify-center gap-[11px] rounded-[10px] bg-brand-btn px-[20px] text-[15px] font-medium text-white shadow-[0_8px_20px_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:w-auto sm:justify-start sm:text-[16px] lg:mt-[28px] lg:h-[56px] lg:gap-[13px] lg:px-[24px] lg:text-[18px]"
+                className="mt-[1.375rem] inline-flex h-[3.125rem] w-full items-center justify-center gap-[0.6875rem] rounded-[0.625rem] bg-brand-btn px-[1.25rem] text-[0.9375rem] font-medium text-white shadow-[0_0.5rem_1.25rem_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:w-auto sm:justify-start sm:text-[1rem] lg:mt-[1.75rem] lg:h-[3.5rem] lg:gap-[0.8125rem] lg:px-[1.5rem] lg:text-[1.125rem]"
               >
-                <CalendarCheck className="h-[19px] w-[19px] lg:h-[22px] lg:w-[22px]" />
+                <CalendarCheck className="h-[1.1875rem] w-[1.1875rem] lg:h-[1.375rem] lg:w-[1.375rem]" />
                 Schedule a free consultation
               </Link>
             </div>
           </div>
 
           {/* Right image */}
-          <div className="relative min-h-[260px] w-full lg:min-h-[440px] lg:w-[50%]">
+          <div className="relative min-h-[16.25rem] w-full lg:min-h-[27.5rem] lg:w-[50%]">
             <Image
               src="/rooftop/house.png"
               alt="House with rooftop solar panels"
@@ -128,28 +128,28 @@ export default function Rooftop() {
       </div>
 
       {/* Services grid */}
-      <div className="w-full bg-white px-5 py-[24px] sm:px-8 lg:px-[40px] lg:py-[36px]">
+      <div className="w-full bg-white px-5 py-[1.5rem] sm:px-8 lg:px-[2.5rem] lg:py-[2.25rem]">
         <div className="w-full text-center">
-          <h3 className="font-display text-[26px] font-bold text-navy sm:text-[30px] lg:text-[36px]">
+          <h3 className="font-display text-[1.625rem] font-bold text-navy sm:text-[1.875rem] lg:text-[2.25rem]">
             Our Rooftop Solar Services
           </h3>
-          <p className="mt-[6px] text-[14px] text-navy/70 lg:text-[16px]">
+          <p className="mt-[0.375rem] text-[0.875rem] text-navy/70 lg:text-[1rem]">
             Complete solutions tailored to your energy needs.
           </p>
 
-          <div className="mt-[20px] grid grid-cols-2 gap-x-[14px] gap-y-[22px] sm:gap-[16px] lg:mt-[28px] lg:grid-cols-3 xl:grid-cols-6 xl:gap-[10px]">
+          <div className="mt-[1.25rem] grid grid-cols-2 gap-x-[0.875rem] gap-y-[1.375rem] sm:gap-[1rem] lg:mt-[1.75rem] lg:grid-cols-3 xl:grid-cols-6 xl:gap-[0.625rem]">
             {steps.map(({ Icon, number, title, desc }) => (
               <div
                 key={title}
                 className="flex flex-col items-center text-center"
               >
-                <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[12px] border-2 border-navy/20 text-navy sm:h-[56px] sm:w-[56px] lg:h-[64px] lg:w-[64px]">
-                  <Icon className="h-[24px] w-[24px] sm:h-[28px] sm:w-[28px] lg:h-[32px] lg:w-[32px]" />
+                <span className="flex h-[3rem] w-[3rem] items-center justify-center rounded-[0.75rem] border-2 border-navy/20 text-navy sm:h-[3.5rem] sm:w-[3.5rem] lg:h-[4rem] lg:w-[4rem]">
+                  <Icon className="h-[1.5rem] w-[1.5rem] sm:h-[1.75rem] sm:w-[1.75rem] lg:h-[2rem] lg:w-[2rem]" />
                 </span>
-                <h4 className="mt-[10px] text-[13px] font-bold leading-[1.3] text-navy sm:mt-[12px] sm:text-[14px] lg:mt-[16px] lg:text-[15px]">
+                <h4 className="mt-[0.625rem] text-[0.8125rem] font-bold leading-[1.3] text-navy sm:mt-[0.75rem] sm:text-[0.875rem] lg:mt-[1rem] lg:text-[0.9375rem]">
                   {number}. {title}
                 </h4>
-                <p className="mt-[6px] text-[11.5px] leading-[1.4] text-navy/70 sm:text-[12px] lg:text-[13px]">
+                <p className="mt-[0.375rem] text-[0.7188rem] leading-[1.4] text-navy/70 sm:text-[0.75rem] lg:text-[0.8125rem]">
                   {desc}
                 </p>
               </div>
@@ -159,19 +159,19 @@ export default function Rooftop() {
       </div>
 
       {/* ---------- Benefits bar ---------- */}
-      <div className="w-full bg-white shadow-[0_4px_24px_rgba(15,26,51,0.1)]">
+      <div className="w-full bg-white shadow-[0_0.25rem_1.5rem_rgba(15,26,51,0.1)]">
         <div className="grid grid-cols-1 divide-y divide-navy/10 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0">
           {benefits.map(({ Icon, title, sub }) => (
             <div
               key={title}
-              className="relative flex items-center gap-[14px] px-[20px] py-[15px] sm:py-[20px] lg:gap-[18px] lg:px-[28px] lg:py-[26px] lg:before:absolute lg:before:inset-y-[16px] lg:before:left-0 lg:before:w-px lg:before:bg-navy/10 lg:first:before:hidden"
+              className="relative flex items-center gap-[0.875rem] px-[1.25rem] py-[0.9375rem] sm:py-[1.25rem] lg:gap-[1.125rem] lg:px-[1.75rem] lg:py-[1.625rem] lg:before:absolute lg:before:inset-y-[1rem] lg:before:left-0 lg:before:w-px lg:before:bg-navy/10 lg:first:before:hidden"
             >
-              <Icon className="h-[30px] w-[30px] shrink-0 text-brand sm:h-[36px] sm:w-[36px] lg:h-[42px] lg:w-[42px]" />
+              <Icon className="h-[1.875rem] w-[1.875rem] shrink-0 text-brand sm:h-[2.25rem] sm:w-[2.25rem] lg:h-[2.625rem] lg:w-[2.625rem]" />
               <span className="block min-w-0">
-                <span className="block text-[14px] font-semibold leading-[1.3] text-navy lg:text-[16px]">
+                <span className="block text-[0.875rem] font-semibold leading-[1.3] text-navy lg:text-[1rem]">
                   {title}
                 </span>
-                <span className="block text-[12px] leading-[1.3] text-navy/60 lg:text-[13px]">
+                <span className="block text-[0.75rem] leading-[1.3] text-navy/60 lg:text-[0.8125rem]">
                   {sub}
                 </span>
               </span>

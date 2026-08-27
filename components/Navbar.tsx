@@ -18,15 +18,15 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-[0_1px_0_rgba(15,26,51,0.08)]">
-      <div className="relative flex h-[76px] items-center justify-between px-5 lg:h-[92px] lg:px-10">
+    <header className="sticky top-0 z-50 bg-white shadow-[0_0.0625rem_0_rgba(15,26,51,0.08)]">
+      <div className="relative flex h-[4.75rem] items-center justify-between px-5 lg:h-[5.75rem] lg:px-10">
         <Link href="/" aria-label="Khors Renewables home" className="shrink-0">
           <Image
             src="/navbar/logo.png"
             alt="Khors Renewables"
             width={300}
             height={300}
-            className="h-[60px] w-auto lg:h-[76px]"
+            className="h-[3.75rem] w-auto lg:h-[4.75rem]"
             priority
             unoptimized
           />
@@ -35,16 +35,16 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav
           aria-label="Main"
-          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-[44px] lg:flex xl:gap-[56px]"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-[2.75rem] lg:flex xl:gap-[3.5rem]"
         >
           {/* Home */}
           <Link
             href="/"
             aria-current="page"
-            className="group relative flex items-center pb-[9px] pt-[9px] text-[17px] font-medium text-navy transition-colors hover:text-brand"
+            className="group relative flex items-center pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
           >
             Home
-            <span className="absolute inset-x-0 bottom-0 h-[2.5px] rounded-full bg-brand opacity-100" />
+            <span className="absolute inset-x-0 bottom-0 h-[0.1562rem] rounded-full bg-brand opacity-100" />
           </Link>
 
           {/* Services dropdown */}
@@ -56,25 +56,25 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setServicesOpen((v) => !v)}
-              className="group relative flex items-center gap-[6px] pb-[9px] pt-[9px] text-[17px] font-medium text-navy transition-colors hover:text-brand"
+              className="group relative flex items-center gap-[0.375rem] pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
             >
               Services
               <ChevronDownIcon
-                className={`mt-[2px] h-[15px] w-[15px] transition-transform ${
+                className={`mt-[0.125rem] h-[0.9375rem] w-[0.9375rem] transition-transform ${
                   servicesOpen ? "rotate-180" : ""
                 }`}
               />
-              <span className="absolute inset-x-0 bottom-0 h-[2.5px] rounded-full bg-brand opacity-0" />
+              <span className="absolute inset-x-0 bottom-0 h-[0.1562rem] rounded-full bg-brand opacity-0" />
             </button>
 
             {servicesOpen && (
-              <div className="absolute left-1/2 top-full z-50 mt-[4px] w-[220px] -translate-x-1/2 rounded-[12px] border border-navy/10 bg-white py-[8px] shadow-[0_10px_30px_rgba(15,26,51,0.12)]">
+              <div className="absolute left-1/2 top-full z-50 mt-[0.25rem] w-[13.75rem] -translate-x-1/2 rounded-[0.75rem] border border-navy/10 bg-white py-[0.5rem] shadow-[0_0.625rem_1.875rem_rgba(15,26,51,0.12)]">
                 {serviceItems.map((item) => (
                   <Link
                     key={item.label}
                     href={item.href}
                     onClick={() => setServicesOpen(false)}
-                    className="block px-[18px] py-[10px] text-[15px] font-medium text-navy transition-colors hover:bg-brand/5 hover:text-brand"
+                    className="block px-[1.125rem] py-[0.625rem] text-[0.9375rem] font-medium text-navy transition-colors hover:bg-brand/5 hover:text-brand"
                   >
                     {item.label}
                   </Link>
@@ -86,10 +86,10 @@ export default function Navbar() {
           {/* Contact Us */}
           <Link
             href="#contact"
-            className="group relative flex items-center pb-[9px] pt-[9px] text-[17px] font-medium text-navy transition-colors hover:text-brand"
+            className="group relative flex items-center pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
           >
             Contact Us
-            <span className="absolute inset-x-0 bottom-0 h-[2.5px] rounded-full bg-brand opacity-0" />
+            <span className="absolute inset-x-0 bottom-0 h-[0.1562rem] rounded-full bg-brand opacity-0" />
           </Link>
         </nav>
 
@@ -135,7 +135,7 @@ export default function Navbar() {
             href="/"
             onClick={() => setMobileOpen(false)}
             aria-current="page"
-            className="flex items-center border-b border-navy/5 py-3 text-[16px] font-medium text-brand"
+            className="flex items-center border-b border-navy/5 py-3 text-[1rem] font-medium text-brand"
           >
             Home
           </Link>
@@ -145,7 +145,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMobileServicesOpen((v) => !v)}
-              className="flex w-full items-center justify-between py-3 text-[16px] font-medium text-navy"
+              className="flex w-full items-center justify-between py-3 text-[1rem] font-medium text-navy"
             >
               Services
               <ChevronDownIcon
@@ -164,7 +164,7 @@ export default function Navbar() {
                       setMobileOpen(false);
                       setMobileServicesOpen(false);
                     }}
-                    className="block py-[8px] text-[15px] font-medium text-navy/80 transition-colors hover:text-brand"
+                    className="block py-[0.5rem] text-[0.9375rem] font-medium text-navy/80 transition-colors hover:text-brand"
                   >
                     {item.label}
                   </Link>
@@ -176,7 +176,7 @@ export default function Navbar() {
           <Link
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center py-3 text-[16px] font-medium text-navy"
+            className="flex items-center py-3 text-[1rem] font-medium text-navy"
           >
             Contact Us
           </Link>

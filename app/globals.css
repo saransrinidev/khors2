@@ -14,6 +14,12 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* Root font size drives every rem in the UI.
+     Holds the 16px design baseline up to ~1600px wide, then scales with the
+     viewport so zooming out keeps type and spacing proportional to the
+     background images instead of shrinking away. Capped so ultrawide
+     displays don't blow up. */
+  font-size: clamp(16px, 1vw, 30px);
 }
 
 body {

@@ -58,19 +58,19 @@ export default function SolarTrusted() {
         priority
       />
 
-      <div className="relative flex flex-col lg:min-h-[calc(100svh_-_92px)]">
+      <div className="relative flex flex-col lg:min-h-[calc(100svh_-_5.75rem)]">
         {/* Wash for readability on phones and tablets */}
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px] lg:hidden" />
+        <div className="absolute inset-0 bg-white/60 backdrop-blur-[0.125rem] lg:hidden" />
 
-        <div className="relative flex flex-1 flex-col px-5 py-[30px] sm:px-8 lg:px-[80px] lg:py-[40px] [@media(min-width:1024px)_and_(max-height:820px)]:py-[22px]">
+        <div className="relative flex flex-1 flex-col px-5 py-[1.875rem] sm:px-8 lg:px-[5rem] lg:py-[2.5rem] [@media(min-width:1024px)_and_(max-height:820px)]:py-[1.375rem]">
           {/* Heading — centered */}
           <div className="text-center">
-            <h2 className="font-display text-[28px] font-bold leading-[1.1] text-navy sm:text-[36px] lg:text-[48px] [@media(min-width:1024px)_and_(max-height:820px)]:text-[38px] [@media(min-width:1024px)_and_(max-height:700px)]:text-[31px]">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.1] text-navy sm:text-[2.25rem] lg:text-[3rem] [@media(min-width:1024px)_and_(max-height:820px)]:text-[2.375rem] [@media(min-width:1024px)_and_(max-height:700px)]:text-[1.9375rem]">
               Trusted <span className="italic">solar</span>
               <br />
               <span className="italic">solutions</span>
             </h2>
-            <p className="mt-[8px] text-[13px] leading-[1.5] text-navy/80 sm:text-[14px] lg:mt-[12px] lg:text-[17px] [@media(min-width:1024px)_and_(max-height:820px)]:mt-[6px] [@media(min-width:1024px)_and_(max-height:820px)]:text-[14px]">
+            <p className="mt-[0.5rem] text-[0.8125rem] leading-[1.5] text-navy/80 sm:text-[0.875rem] lg:mt-[0.75rem] lg:text-[1.0625rem] [@media(min-width:1024px)_and_(max-height:820px)]:mt-[0.375rem] [@media(min-width:1024px)_and_(max-height:820px)]:text-[0.875rem]">
               Certified. Compliant. Reliable.
               <br />
               Powering a sustainable tomorrow.
@@ -78,37 +78,37 @@ export default function SolarTrusted() {
           </div>
 
           {/* Cards — stacked on phones, 2-up on tablets, 4-up on desktop */}
-          <div className="relative mx-auto mt-[20px] grid w-full max-w-[1000px] grid-cols-1 gap-[12px] sm:grid-cols-2 sm:gap-[14px] lg:mt-[30px] lg:grid-cols-4 lg:gap-[18px] [@media(min-width:1024px)_and_(max-height:820px)]:mt-[16px]" style={{ zIndex: 3 }}>
+          <div className="relative mx-auto mt-[1.25rem] grid w-full max-w-[62.5rem] grid-cols-1 gap-[0.75rem] sm:grid-cols-2 sm:gap-[0.875rem] lg:mt-[1.875rem] lg:grid-cols-4 lg:gap-[1.125rem] [@media(min-width:1024px)_and_(max-height:820px)]:mt-[1rem]" style={{ zIndex: 3 }}>
             {cards.map(({ logo, title, desc }) => (
               <div
                 key={title}
-                className="relative flex items-center gap-[14px] overflow-hidden rounded-[14px] bg-white/95 p-[12px] shadow-[0_4px_16px_rgba(15,26,51,0.1)] backdrop-blur-sm sm:block sm:p-0 lg:rounded-[16px]"
+                className="relative flex items-center gap-[0.875rem] overflow-hidden rounded-[0.875rem] bg-white/95 p-[0.75rem] shadow-[0_0.25rem_1rem_rgba(15,26,51,0.1)] backdrop-blur-sm sm:block sm:p-0 lg:rounded-[1rem]"
               >
                 {/* Green check badge — top left */}
-                <span className="absolute left-[10px] top-[10px] z-10 flex h-[24px] w-[24px] items-center justify-center rounded-full bg-brand text-white sm:h-[26px] sm:w-[26px] lg:left-[12px] lg:top-[12px] lg:h-[28px] lg:w-[28px]">
-                  <svg viewBox="0 0 24 24" className="h-[14px] w-[14px] lg:h-[16px] lg:w-[16px]" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <span className="absolute left-[0.625rem] top-[0.625rem] z-10 flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-full bg-brand text-white sm:h-[1.625rem] sm:w-[1.625rem] lg:left-[0.75rem] lg:top-[0.75rem] lg:h-[1.75rem] lg:w-[1.75rem]">
+                  <svg viewBox="0 0 24 24" className="h-[0.875rem] w-[0.875rem] lg:h-[1rem] lg:w-[1rem]" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="m5 12 5 5L20 7" />
                   </svg>
                 </span>
 
                 {/* Logo image area — big, fills space */}
-                <div className="relative h-[86px] w-[86px] shrink-0 sm:h-[130px] sm:w-full lg:h-[160px] [@media(min-width:1024px)_and_(max-height:820px)]:h-[112px] [@media(min-width:1024px)_and_(max-height:700px)]:h-[90px]">
+                <div className="relative h-[5.375rem] w-[5.375rem] shrink-0 sm:h-[8.125rem] sm:w-full lg:h-[10rem] [@media(min-width:1024px)_and_(max-height:820px)]:h-[7rem] [@media(min-width:1024px)_and_(max-height:700px)]:h-[5.625rem]">
                   <Image
                     src={logo}
                     alt={title}
                     fill
                     sizes="(min-width: 640px) 250px, 86px"
-                    className="object-contain object-center p-[6px] sm:p-[8px] lg:p-[10px]"
+                    className="object-contain object-center p-[0.375rem] sm:p-[0.5rem] lg:p-[0.625rem]"
                     unoptimized
                   />
                 </div>
 
                 {/* Text content */}
-                <div className="flex min-w-0 flex-col items-start text-left sm:items-center sm:px-[18px] sm:pb-[22px] sm:pt-[16px] sm:text-center lg:px-[24px] lg:pb-[28px] lg:pt-[18px] [@media(min-width:1024px)_and_(max-height:820px)]:px-[16px] [@media(min-width:1024px)_and_(max-height:820px)]:pb-[14px] [@media(min-width:1024px)_and_(max-height:820px)]:pt-[10px]">
-                  <h4 className="text-[13px] font-bold uppercase tracking-[0.04em] text-navy sm:text-[13px] lg:text-[15px] [@media(min-width:1024px)_and_(max-height:820px)]:text-[13px]">
+                <div className="flex min-w-0 flex-col items-start text-left sm:items-center sm:px-[1.125rem] sm:pb-[1.375rem] sm:pt-[1rem] sm:text-center lg:px-[1.5rem] lg:pb-[1.75rem] lg:pt-[1.125rem] [@media(min-width:1024px)_and_(max-height:820px)]:px-[1rem] [@media(min-width:1024px)_and_(max-height:820px)]:pb-[0.875rem] [@media(min-width:1024px)_and_(max-height:820px)]:pt-[0.625rem]">
+                  <h4 className="text-[0.8125rem] font-bold uppercase tracking-[0.04em] text-navy sm:text-[0.8125rem] lg:text-[0.9375rem] [@media(min-width:1024px)_and_(max-height:820px)]:text-[0.8125rem]">
                     {title}
                   </h4>
-                  <p className="mt-[6px] text-[12px] leading-[1.5] text-navy/70 sm:mt-[8px] sm:text-[12px] lg:mt-[10px] lg:text-[14px] [@media(min-width:1024px)_and_(max-height:820px)]:mt-[6px] [@media(min-width:1024px)_and_(max-height:820px)]:text-[12px] [@media(min-width:1024px)_and_(max-height:700px)]:leading-[1.4]">
+                  <p className="mt-[0.375rem] text-[0.75rem] leading-[1.5] text-navy/70 sm:mt-[0.5rem] sm:text-[0.75rem] lg:mt-[0.625rem] lg:text-[0.875rem] [@media(min-width:1024px)_and_(max-height:820px)]:mt-[0.375rem] [@media(min-width:1024px)_and_(max-height:820px)]:text-[0.75rem] [@media(min-width:1024px)_and_(max-height:700px)]:leading-[1.4]">
                     {desc}
                   </p>
                 </div>
@@ -117,7 +117,7 @@ export default function SolarTrusted() {
           </div>
 
           {/* Humans image — right side, behind cards, visible above/below them */}
-          <div className="pointer-events-none absolute bottom-[10px] right-[60px] hidden h-[360px] w-[400px] min-[1815px]:block lg:bottom-[-90px] lg:right-[-80px] lg:h-[440px] lg:w-[500px]" style={{ zIndex: 2 }}>
+          <div className="pointer-events-none absolute bottom-[0.625rem] right-[3.75rem] hidden h-[22.5rem] w-[25rem] min-[1815px]:block lg:bottom-[-5.625rem] lg:right-[-5rem] lg:h-[27.5rem] lg:w-[31.25rem]" style={{ zIndex: 2 }}>
             <Image
               src="/solar-trusted/team5.png"
               alt="Khors Renewables team members"
@@ -133,15 +133,15 @@ export default function SolarTrusted() {
         {/* ---------- Bottom band: products + CTA ---------- */}
         {/* Kept in normal document flow at every size, so it can never overlap
             the cards above it — the products always sit below them. */}
-        <div className="relative z-10 mt-[24px] flex shrink-0 flex-col lg:mt-0 lg:flex-row lg:items-end">
+        <div className="relative z-10 mt-[1.5rem] flex shrink-0 flex-col lg:mt-0 lg:flex-row lg:items-end">
           {/* Strip column — product visuals stacked directly above their labels */}
           <div className="flex min-w-0 flex-1 flex-col">
             {/* Product visuals */}
-            <div className="grid grid-cols-3 items-end gap-[8px] px-[10px] pt-[12px] sm:gap-[16px] sm:px-[20px] lg:gap-[24px] lg:px-[30px] lg:pb-[6px] lg:pt-0">
+            <div className="grid grid-cols-3 items-end gap-[0.5rem] px-[0.625rem] pt-[0.75rem] sm:gap-[1rem] sm:px-[1.25rem] lg:gap-[1.5rem] lg:px-[1.875rem] lg:pb-[0.375rem] lg:pt-0">
               {products.map(({ image, title }) => (
                 <div
                   key={title}
-                  className="relative h-[62px] sm:h-[84px] lg:h-[9vh] lg:max-h-[104px] [@media(min-width:1024px)_and_(max-height:700px)]:h-[62px]"
+                  className="relative h-[3.875rem] sm:h-[5.25rem] lg:h-[9vh] lg:max-h-[6.5rem] [@media(min-width:1024px)_and_(max-height:700px)]:h-[3.875rem]"
                 >
                   <Image
                     src={image}
@@ -156,14 +156,14 @@ export default function SolarTrusted() {
             </div>
 
             {/* White strip holding the labels */}
-            <div className="bg-white/85 backdrop-blur-[2px] lg:rounded-tr-[90px]">
-              <div className="grid grid-cols-3 items-start gap-[8px] px-[10px] pb-[14px] pt-[8px] sm:gap-[16px] sm:px-[20px] lg:gap-[24px] lg:px-[30px] lg:pb-[16px] lg:pt-[12px] [@media(min-width:1024px)_and_(max-height:820px)]:pb-[10px] [@media(min-width:1024px)_and_(max-height:820px)]:pt-[8px]">
+            <div className="bg-white/85 backdrop-blur-[0.125rem] lg:rounded-tr-[5.625rem]">
+              <div className="grid grid-cols-3 items-start gap-[0.5rem] px-[0.625rem] pb-[0.875rem] pt-[0.5rem] sm:gap-[1rem] sm:px-[1.25rem] lg:gap-[1.5rem] lg:px-[1.875rem] lg:pb-[1rem] lg:pt-[0.75rem] [@media(min-width:1024px)_and_(max-height:820px)]:pb-[0.625rem] [@media(min-width:1024px)_and_(max-height:820px)]:pt-[0.5rem]">
                 {products.map(({ title, tags }) => (
                   <div key={title} className="text-center">
-                    <h5 className="text-[10px] font-bold uppercase leading-[1.25] tracking-[0.03em] text-navy sm:text-[13px] lg:text-[15px]">
+                    <h5 className="text-[0.625rem] font-bold uppercase leading-[1.25] tracking-[0.03em] text-navy sm:text-[0.8125rem] lg:text-[0.9375rem]">
                       {title}
                     </h5>
-                    <p className="mt-[3px] hidden text-[9px] leading-[1.3] text-navy/60 sm:block sm:text-[11px] lg:text-[12px]">
+                    <p className="mt-[0.1875rem] hidden text-[0.5625rem] leading-[1.3] text-navy/60 sm:block sm:text-[0.6875rem] lg:text-[0.75rem]">
                       {tags.join("  |  ")}
                     </p>
                   </div>
@@ -175,9 +175,9 @@ export default function SolarTrusted() {
           {/* CTA — full width bar on mobile, flush corner block on desktop */}
           <Link
             href="#contact"
-            className="inline-flex w-full shrink-0 items-center justify-center gap-[10px] rounded-none bg-brand-btn px-[16px] py-[15px] text-[14px] font-medium text-white transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:text-[15px] lg:w-auto lg:justify-start lg:gap-[14px] lg:rounded-tl-[60px] lg:py-[22px] lg:pl-[52px] lg:pr-[36px] lg:text-[18px] [@media(min-width:1024px)_and_(max-height:820px)]:py-[18px]"
+            className="inline-flex w-full shrink-0 items-center justify-center gap-[0.625rem] rounded-none bg-brand-btn px-[1rem] py-[0.9375rem] text-[0.875rem] font-medium text-white transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:text-[0.9375rem] lg:w-auto lg:justify-start lg:gap-[0.875rem] lg:rounded-tl-[3.75rem] lg:py-[1.375rem] lg:pl-[3.25rem] lg:pr-[2.25rem] lg:text-[1.125rem] [@media(min-width:1024px)_and_(max-height:820px)]:py-[1.125rem]"
           >
-            <CalendarCheck className="h-[18px] w-[18px] lg:h-[24px] lg:w-[24px]" />
+            <CalendarCheck className="h-[1.125rem] w-[1.125rem] lg:h-[1.5rem] lg:w-[1.5rem]" />
             Schedule a free consultation
           </Link>
         </div>
