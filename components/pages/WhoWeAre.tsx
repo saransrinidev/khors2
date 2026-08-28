@@ -53,14 +53,16 @@ const benefits = [
 export default function WhoWeAre() {
   return (
     <section id="who-we-are" className="relative isolate flex min-h-[35rem] w-full flex-col overflow-hidden lg:min-h-[calc(100svh_-_5.75rem)]">
-      {/* Background photo */}
-      <Image
-        src="/who-we-are/final-Bg.png"
-        alt="Khors Renewables team working on solar panel installation"
-        fill
-        sizes="100vw"
-        className="-z-20 object-cover object-[80%_20%]"
-      />
+      {/* Background photo — fits the section (no zoom) */}
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src="/who-we-are/final-bg2.png"
+          alt="Khors Renewables team working on solar panel installation"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
 
       {/* White wash for text legibility */}
       <div className="absolute inset-0 -z-10 bg-white/65 backdrop-blur-[0.1875rem] lg:hidden" />
@@ -82,7 +84,7 @@ export default function WhoWeAre() {
           <div className="mt-[0.875rem] h-[0.1875rem] w-[2.5rem] rounded-full bg-navy lg:mt-[1.125rem] lg:h-[0.25rem] lg:w-[3.125rem]" />
 
           {/* Points */}
-          <div className="mt-[1.125rem] -ml-[0.625rem] space-y-[0rem] lg:mt-[1.375rem] lg:-ml-[5.375rem] lg:space-y-[0rem] [text-shadow:0_0_0.5rem_rgba(255,255,255,0.9),0_0_1rem_rgba(255,255,255,0.7)]">
+          <div className="mt-[1.125rem] -ml-[0.625rem] space-y-[0rem] lg:mt-[2.375rem] lg:-ml-[1.375rem] lg:space-y-[0rem] [text-shadow:0_0_0.5rem_rgba(255,255,255,0.9),0_0_1rem_rgba(255,255,255,0.7)]">
             {points.map(({ logo, text }, i) => (
               <div key={text.slice(0, 30)}>
                 {i > 0 && (
