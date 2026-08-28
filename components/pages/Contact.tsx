@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ConsultationButton from "@/components/consultation/ConsultationButton";
 import {
   CalendarCheck,
   Mail,
@@ -62,13 +62,12 @@ export default function Contact() {
           </div>
 
           {/* CTA */}
-          <Link
-            href="#contact"
+          <ConsultationButton
             className="mt-[1.125rem] inline-flex h-[3rem] w-full items-center justify-center gap-[0.625rem] rounded-[0.5rem] border-2 border-brand-btn bg-transparent px-[1.125rem] text-[0.875rem] font-bold text-brand-btn transition-colors hover:bg-brand-btn hover:text-white sm:w-fit sm:text-[0.9375rem] lg:mt-[1.375rem] lg:h-[3.25rem] lg:gap-[0.75rem] lg:px-[1.375rem] lg:text-[1.0625rem]"
           >
             <CalendarCheck className="h-[1.125rem] w-[1.125rem] lg:h-[1.25rem] lg:w-[1.25rem]" />
             Schedule a free consultation
-          </Link>
+          </ConsultationButton>
 
           {/* Contact Information card */}
           <div className="mt-[1.75rem] rounded-[0.875rem] border border-navy/10 bg-white/80 px-[1.25rem] py-[1.125rem] backdrop-blur-sm lg:mt-[2.125rem] lg:px-[1.5rem] lg:py-[1.375rem]">
@@ -92,10 +91,19 @@ export default function Contact() {
               <div className="flex min-w-0 items-center gap-[0.625rem]">
                 <Phone className="h-[1rem] w-[1rem] shrink-0 text-navy/60 lg:h-[1.125rem] lg:w-[1.125rem]" />
                 <a
-                  href="tel:+919844515676"
+                  href="tel:+917200830719"
                   className="text-[0.8438rem] font-semibold text-navy transition-colors hover:text-brand sm:text-[0.875rem] lg:text-[1rem]"
                 >
-                  +91 9844515676
+                  +91 72008 30719
+                </a>
+              </div>
+              <div className="flex min-w-0 items-center gap-[0.625rem]">
+                <Phone className="h-[1rem] w-[1rem] shrink-0 text-navy/60 lg:h-[1.125rem] lg:w-[1.125rem]" />
+                <a
+                  href="tel:+917200539720"
+                  className="text-[0.8438rem] font-semibold text-navy transition-colors hover:text-brand sm:text-[0.875rem] lg:text-[1rem]"
+                >
+                  +91 72005 39720
                 </a>
               </div>
               <div className="flex items-start gap-[0.625rem]">

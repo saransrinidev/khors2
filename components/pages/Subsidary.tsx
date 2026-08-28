@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ConsultationButton from "@/components/consultation/ConsultationButton";
 import {
   CalendarCheck,
   ClipboardCheck,
@@ -74,7 +74,7 @@ export default function Subsidary() {
     <section id="subsidary" className="relative isolate w-full flex flex-col overflow-hidden lg:min-h-[calc(100svh_-_5.75rem)]">
       {/* Background image */}
       <Image
-        src="/subsidary/back2.png"
+        src="/subsidary/back3.png"
         alt="Government subsidy benefits for solar installations"
         fill
         sizes="100vw"
@@ -174,13 +174,12 @@ export default function Subsidary() {
               </p>
             </div>
 
-            <Link
-              href="#contact"
+            <ConsultationButton
               className="mt-[0.875rem] inline-flex h-[2.75rem] w-full items-center justify-center gap-[0.5625rem] rounded-[0.5rem] bg-brand-btn px-[1rem] text-[0.875rem] font-medium text-white shadow-[0_0.375rem_1rem_rgba(15,26,51,0.15)] transition-colors hover:bg-brand-btn-hover md:w-auto md:justify-start lg:mt-[1rem] lg:h-[3rem] lg:gap-[0.625rem] lg:px-[1.25rem] lg:text-[1rem]"
             >
               <CalendarCheck className="h-[1rem] w-[1rem] lg:h-[1.125rem] lg:w-[1.125rem]" />
               Schedule a free consultation
-            </Link>
+            </ConsultationButton>
           </div>
         </div>
       </div>

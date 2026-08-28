@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import { ConsultationProvider } from "@/components/consultation/ConsultationContext";
+import ConsultationModal from "@/components/consultation/ConsultationModal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +25,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <ConsultationProvider>
+          {children}
+          <ConsultationModal />
+        </ConsultationProvider>
+      </body>
     </html>
   );
 }

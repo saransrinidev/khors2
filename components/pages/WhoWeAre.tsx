@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ConsultationButton from "@/components/consultation/ConsultationButton";
 import {
   Zap,
   Leaf,
@@ -110,13 +110,12 @@ export default function WhoWeAre() {
 
         {/* CTA button — full width on phones, bottom right on desktop */}
         <div className="mt-[1.5rem] flex w-full justify-start sm:justify-end lg:mt-auto">
-          <Link
-            href="#contact"
+          <ConsultationButton
             className="inline-flex h-[3.125rem] w-full items-center justify-center gap-[0.6875rem] rounded-[0.625rem] bg-brand-btn px-[1.25rem] text-[0.9375rem] font-medium text-white shadow-[0_0.5rem_1.25rem_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:w-auto sm:text-[1rem] lg:h-[3.5rem] lg:gap-[0.8125rem] lg:px-[1.5rem] lg:text-[1.125rem]"
           >
             <CalendarCheck className="h-[1.1875rem] w-[1.1875rem] lg:h-[1.375rem] lg:w-[1.375rem]" />
             Schedule a free consultation
-          </Link>
+          </ConsultationButton>
         </div>
       </div>
 

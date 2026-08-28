@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ConsultationButton from "@/components/consultation/ConsultationButton";
 import {
   CalendarCheck,
 } from "lucide-react";
@@ -173,13 +173,12 @@ export default function SolarTrusted() {
           </div>
 
           {/* CTA — full width bar on mobile, flush corner block on desktop */}
-          <Link
-            href="#contact"
+          <ConsultationButton
             className="inline-flex w-full shrink-0 items-center justify-center gap-[0.625rem] rounded-none bg-brand-btn px-[1rem] py-[0.9375rem] text-[0.875rem] font-medium text-white transition-colors hover:bg-brand-btn-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-btn sm:text-[0.9375rem] lg:w-auto lg:justify-start lg:gap-[0.875rem] lg:rounded-tl-[3.75rem] lg:py-[1.375rem] lg:pl-[3.25rem] lg:pr-[2.25rem] lg:text-[1.125rem] [@media(min-width:1024px)_and_(max-height:820px)]:py-[1.125rem]"
           >
             <CalendarCheck className="h-[1.125rem] w-[1.125rem] lg:h-[1.5rem] lg:w-[1.5rem]" />
             Schedule a free consultation
-          </Link>
+          </ConsultationButton>
         </div>
       </div>
     </section>
