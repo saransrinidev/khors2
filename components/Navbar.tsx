@@ -39,7 +39,8 @@ export default function Navbar() {
 
           {/* Services */}
           <Link
-            href="#solar-trusted"
+            href="#rooftop"
+            suppressHydrationWarning
             className="group relative flex items-center pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
           >
             Services
@@ -105,7 +106,7 @@ export default function Navbar() {
 
           {/* Services */}
           <Link
-            href="#solar-trusted"
+            href="#rooftop"
             onClick={() => setMobileOpen(false)}
             className="flex items-center border-b border-navy/5 py-3 text-[1rem] font-medium text-navy"
           >

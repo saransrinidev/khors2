@@ -14,11 +14,8 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  /* Root font size drives every rem in the UI.
-     Holds the 16px design baseline up to ~1600px wide, then scales with the
-     viewport so zooming out keeps type and spacing proportional to the
-     background images instead of shrinking away. Capped so ultrawide
-     displays don't blow up. */
+  /* Fluid root: holds a 16px baseline, scales gently on very wide screens so
+     zooming out keeps type proportional to the full-bleed images. */
   font-size: clamp(16px, 1vw, 30px);
 }
 
@@ -28,4 +25,7 @@ body {
   font-weight: 700;
   color: var(--color-navy);
   background: #ffffff;
+  /* Scale the whole layout down 3% uniformly. `zoom` scales the rendered
+     layout, which font-size alone can't because most sizes are rem literals. */
+  zoom: 0.97;
 }
