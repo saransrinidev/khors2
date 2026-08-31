@@ -185,7 +185,7 @@ export default function Subsidary() {
       </div>
 
       {/* Benefits bar — bottom */}
-      <div className="relative z-10 mx-[0.625rem] mb-[0.625rem] rounded-[0.875rem] bg-navy shadow-[0_-0.25rem_2.125rem_rgba(15,26,51,0.12)] sm:mx-8 lg:mx-[5rem]">
+      <div className="relative z-10 w-full bg-navy shadow-[0_-0.25rem_2.125rem_rgba(15,26,51,0.12)]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map(({ Icon, title, sub }) => (
             <div
