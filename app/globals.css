@@ -39,7 +39,7 @@ body {
   font-weight: 700;
   color: var(--color-navy);
   background: #ffffff;
-  /* Scale the whole layout down 5% uniformly. `zoom` scales the rendered
-     layout, which font-size alone can't because most sizes are rem literals. */
-  zoom: 0.95;
+  /* Scale the whole layout uniformly. `zoom` scales the rendered layout,
+     which font-size alone can't because most sizes are rem literals. */
+  zoom: 0.955;
 }

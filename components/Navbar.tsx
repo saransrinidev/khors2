@@ -29,7 +29,7 @@ export default function Navbar() {
         >
           {/* Home */}
           <Link
-            href="/"
+            href="#home"
             aria-current="page"
             className="group relative flex items-center pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
           >
@@ -96,7 +96,7 @@ export default function Navbar() {
           className="border-t border-navy/10 bg-white px-5 pb-4 pt-2 lg:hidden"
         >
           <Link
-            href="/"
+            href="#home"
             onClick={() => setMobileOpen(false)}
             aria-current="page"
             className="flex items-center border-b border-navy/5 py-3 text-[1rem] font-medium text-brand"
