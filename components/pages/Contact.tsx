@@ -18,7 +18,7 @@ export default function Contact() {
         alt="Khors Renewables customer support representative"
         fill
         sizes="100vw"
-        className="-z-20 object-cover object-[center_bottom]"
+        className="-z-20 object-cover object-[center_35%]"
         priority
       />
 
@@ -63,7 +63,7 @@ export default function Contact() {
 
           {/* CTA */}
           <ConsultationButton
-            className="mt-[1.125rem] inline-flex h-[3rem] w-full items-center justify-center gap-[0.625rem] rounded-[0.5rem] border-2 border-brand-btn bg-transparent px-[1.125rem] text-[0.875rem] font-bold text-brand-btn transition-colors hover:bg-brand-btn hover:text-white sm:w-fit sm:text-[0.9375rem] lg:mt-[1.375rem] lg:h-[3.25rem] lg:gap-[0.75rem] lg:px-[1.375rem] lg:text-[1.0625rem]"
+            className="mt-[1.125rem] inline-flex h-[3rem] w-full items-center justify-center gap-[0.625rem] rounded-[0.5rem] bg-brand-btn px-[1.125rem] text-[0.875rem] font-bold text-white shadow-[0_0.5rem_1.25rem_rgba(15,26,51,0.2)] transition-colors hover:bg-brand-btn-hover sm:w-fit sm:text-[0.9375rem] lg:mt-[1.375rem] lg:h-[3.25rem] lg:gap-[0.75rem] lg:px-[1.375rem] lg:text-[1.0625rem]"
           >
             <CalendarCheck className="h-[1.125rem] w-[1.125rem] lg:h-[1.25rem] lg:w-[1.25rem]" />
             Schedule a free consultation
