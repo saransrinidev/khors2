@@ -125,7 +125,7 @@ export default function Hero() {
                 <span className="block text-[0.875rem] font-semibold leading-[1.3] text-navy sm:text-[0.9375rem] lg:text-[1.25rem]">
                   {title}
                 </span>
-                <span className="block text-[0.875rem] leading-[1.3] text-navy/65 sm:text-[0.9375rem] lg:text-[1.25rem]">
+                <span className="block text-[0.875rem] leading-[1.3] text-navy sm:text-[0.9375rem] lg:text-[1.25rem]">
                   {sub}
                 </span>
               </span>

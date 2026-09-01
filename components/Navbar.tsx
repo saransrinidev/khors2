@@ -2,10 +2,52 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+// Single source of truth for nav links. `id` is the section the link points to
+// and drives which item shows the active underline.
+const navLinks = [
+  { label: "Home", href: "/", id: "home" },
+  { label: "Services", href: "#solar-trusted", id: "solar-trusted" },
+  { label: "Contact Us", href: "#contact", id: "contact" },
+];
+
+// Sections tracked for the scroll-spy, in document order.
+const sectionIds = ["home", "solar-trusted", "contact"];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  // Start on "home" so the server and first client render match (no hydration
+  // mismatch). The observer refines this after mount.
+  const [active, setActive] = useState("home");
+
+  useEffect(() => {
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the entry most in view near the top of the viewport.
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) {
+          setActive(visible[0].target.id);
+        }
+      },
+      {
+        // Trigger when a section crosses the band just below the sticky navbar.
+        rootMargin: "-45% 0px -50% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-[0_0.0625rem_0_rgba(15,26,51,0.08)]">
@@ -27,34 +69,25 @@ export default function Navbar() {
           aria-label="Main"
           className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-[2.75rem] lg:flex xl:gap-[3.5rem]"
         >
-          {/* Home */}
-          <Link
-            href="#home"
-            aria-current="page"
-            className="group relative flex items-center pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
-          >
-            Home
-            <span className="absolute inset-x-0 bottom-0 h-[0.1562rem] rounded-full bg-brand opacity-100" />
-          </Link>
-
-          {/* Services */}
-          <Link
-            href="#rooftop"
-            suppressHydrationWarning
-            className="group relative flex items-center pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
-          >
-            Services
-            <span className="absolute inset-x-0 bottom-0 h-[0.1562rem] rounded-full bg-brand opacity-0 group-hover:opacity-100" />
-          </Link>
-
-          {/* Contact Us */}
-          <Link
-            href="#contact"
-            className="group relative flex items-center pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
-          >
-            Contact Us
-            <span className="absolute inset-x-0 bottom-0 h-[0.1562rem] rounded-full bg-brand opacity-0" />
-          </Link>
+          {navLinks.map((link) => {
+            const isActive = active === link.id;
+            return (
+              <Link
+                key={link.id}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                onClick={() => setActive(link.id)}
+                className="group relative flex items-center pb-[0.5625rem] pt-[0.5625rem] text-[1.0625rem] font-medium text-navy transition-colors hover:text-brand"
+              >
+                {link.label}
+                <span
+                  className={`absolute inset-x-0 bottom-0 h-[0.1562rem] rounded-full bg-brand transition-opacity group-hover:opacity-100 ${
+                    isActive ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Mobile toggle */}
@@ -95,31 +128,32 @@ export default function Navbar() {
           aria-label="Mobile"
           className="border-t border-navy/10 bg-white px-5 pb-4 pt-2 lg:hidden"
         >
-          <Link
-            href="#home"
-            onClick={() => setMobileOpen(false)}
-            aria-current="page"
-            className="flex items-center border-b border-navy/5 py-3 text-[1rem] font-medium text-brand"
-          >
-            Home
-          </Link>
-
-          {/* Services */}
-          <Link
-            href="#rooftop"
-            onClick={() => setMobileOpen(false)}
-            className="flex items-center border-b border-navy/5 py-3 text-[1rem] font-medium text-navy"
-          >
-            Services
-          </Link>
-
-          <Link
-            href="#contact"
-            onClick={() => setMobileOpen(false)}
-            className="flex items-center py-3 text-[1rem] font-medium text-navy"
-          >
-            Contact Us
-          </Link>
+          {navLinks.map((link, i) => {
+            const isActive = active === link.id;
+            return (
+              <Link
+                key={link.id}
+                href={link.href}
+                onClick={() => {
+                  setActive(link.id);
+                  setMobileOpen(false);
+                }}
+                aria-current={isActive ? "page" : undefined}
+                className={`flex items-center py-3 text-[1rem] font-medium transition-colors ${
+                  i < navLinks.length - 1 ? "border-b border-navy/5" : ""
+                } ${isActive ? "text-brand" : "text-navy"}`}
+              >
+                <span className="relative">
+                  {link.label}
+                  <span
+                    className={`absolute inset-x-0 -bottom-[0.25rem] h-[0.125rem] rounded-full bg-brand transition-opacity ${
+                      isActive ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                </span>
+              </Link>
+            );
+          })}
         </nav>
       )}
     </header>
