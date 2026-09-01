@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 // Single source of truth for nav links. `id` is the section the link points to
 // and drives which item shows the active underline.
 const navLinks = [
-  { label: "Home", href: "/", id: "home" },
-  { label: "Services", href: "#solar-trusted", id: "solar-trusted" },
+  { label: "Home", href: "#home", id: "home" },
+  { label: "Services", href: "#rooftop", id: "rooftop" },
   { label: "Contact Us", href: "#contact", id: "contact" },
 ];
 
 // Sections tracked for the scroll-spy, in document order.
-const sectionIds = ["home", "solar-trusted", "contact"];
+const sectionIds = ["home", "rooftop", "contact"];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
